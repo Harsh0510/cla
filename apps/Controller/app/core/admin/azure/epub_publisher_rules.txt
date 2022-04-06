@@ -1,0 +1,222 @@
+# Please use tabs for indentation!
+# Lines that begin with a '#' are comments - the whole line is ignored.
+# Blank lines are ignored.
+#
+# Allowed properties: trimSize, fontSize, margins, lineHeight
+#
+# trimSize measurements are in cm - omit the 'cm'
+# fontSize measurements are in pt - omit the 'pt'
+# margin measurements are in pt - omit the 'pt'
+# lineHeight measurements are in percentages (so 100 means 100%) - omit the '%'
+#
+# Aspect ratios should be specified in the format <number>-<number> (e.g. '0.5 - 1.2'). Spaces may surround the dash.
+# Please use ascii dashes, not en- or em-dashes.
+# The aspect ratio '0.5 - 0.8' is interpreted to mean 'greater than or equal to 0.5 and strictly less than 0.8'.
+# Aspect ratios should not leave any gaps. So '0.5-0.59' and '0.6-0.69' should not be used because it won't include
+# books with an aspect ratio of 0.595. Adjacent aspect ratios should always 'touch' - so the example should be
+# 0.5-0.6 and 0.6-0.7.
+#
+# To specify a set of rules for multiple imprints, separate the imprints with 'OR' and at least one space either side.
+# E.g. 'Puffin OR Puffin Classics'.
+#
+# To specify that rules should apply to any imprint within a publisher, specify the imprint as '<any>'.
+# To specify that rules should apply to any aspect ratio within an imprint, specify the aspect ratio as '<any>'.
+#
+# Any publishers, imprints or aspect ratios that aren't specified here will error.
+
+Penguin Random House Children's UK
+	Puffin OR Puffin Classics
+		0.772-0.93
+			trimSize = 19 x 24
+			fontSize = 14
+		0.93-1.15
+			trimSize = 25 x 25
+			fontSize = 14
+		1.15-1.33
+			trimSize = 26 x 23
+			fontSize = 14
+	Penguin OR Penguin Classics
+		0.6-0.772
+			trimSize = 13 x 20
+			fontSize = 11
+			lineHeight = 125
+	BBC Children's Books
+		0.6-0.772
+			trimSize = 15.5 x 23
+			fontSize = 12
+		0.772-0.93
+			trimSize = 19 x 24
+			fontSize = 14
+		0.93-1.15
+			trimSize = 18 x 18
+			fontSize = 14
+		1.15-1.33
+			trimSize = 26 x 23
+			fontSize = 14
+	Ladybird
+		0.6-0.772
+			trimSize = 14.5 x 21.5
+			fontSize = 13
+		0.772-0.93
+			trimSize = 19 x 24
+			fontSize = 14
+		0.93-1.15
+			trimSize = 25 x 25
+			fontSize = 14
+		1.15-1.33
+			trimSize = 26 x 23
+			fontSize = 14
+	RHCP digital
+		0.772-0.93
+			trimSize = 23 x 29
+			fontSize = 14
+		0.93-1.15
+			trimSize = 18 x 18
+			fontSize = 14
+		1.15-1.33
+			trimSize = 26 x 23
+			fontSize = 14
+	Warne
+		0.6-0.772
+			trimSize = 11.5 x 15
+			fontSize = 14
+Penguin Books Ltd
+	Penguin OR Penguin Classics
+		0.6-0.772
+			trimSize = 13 x 20
+			fontSize = 11
+			lineHeight = 125
+Random House
+	BBC Digital
+		0.6-0.772
+			trimSize = 13 x 20
+			fontSize = 12
+		0.772-0.93
+			trimSize = 23 x 29
+			fontSize = 14
+		0.93-1.15
+			trimSize = 14 x 16
+			fontSize = 14
+	Cornerstone Digital
+		0.6-0.772
+			trimSize = 13 x 20
+			fontSize = 12
+	Ebury Digital
+		0.5-0.6
+			trimSize = 10 x 20
+			fontSize = 12
+		0.6-0.772
+			trimSize = 13 x 20
+			fontSize = 12
+		0.772-0.93
+			trimSize = 23 x 29
+			fontSize = 14
+		0.93-1.15
+			trimSize = 20 x 20
+			fontSize = 14
+	Merky Books Digital
+		0.6-0.772
+			trimSize = 13 x 20
+			fontSize = 12
+	Preface Digital
+		0.6-0.772
+			trimSize = 13 x 20
+			fontSize = 12
+	Vintage Digital
+		0.6-0.772
+			trimSize = 13 x 20
+			fontSize = 12
+		0.93-1.15
+			trimSize = 13 x 13
+			fontSize = 12
+	Virgin Digital
+		0.6-0.772
+			trimSize = 13 x 20
+			fontSize = 12
+		0.772-0.93
+			trimSize = 20 x 24
+			fontSize = 14
+		0.93-1.15
+			trimSize = 14 x 14
+			fontSize = 12
+		
+Hachette
+	Franklin watts
+		<any>
+			trimSize = 14.5 x 21.5
+			fontSize = 13
+	Wayland
+		<any>
+			trimSize = 14.5 x 21.5
+			fontSize = 13
+Faber & Faber
+	<any>
+		0.6-0.772
+			trimSize = 13 x 20
+			fontSize = 12
+		0.772-0.93
+			trimSize = 19 x 24
+			fontSize = 12
+		0.93-1.15
+			trimSize = 25 x 25
+			fontSize = 14
+		1.15-1.33
+			trimSize = 26 x 23
+			fontSize = 14
+SPCK
+	<any>
+		<any>
+			trimSize = 14.5 x 21.5
+			fontSize = 12
+IVP
+	<any>
+		<any>
+			trimSize = 14.5 x 21.5
+			fontSize = 12
+Crown House Publishing
+	<any>
+		<any>
+			trimSize = 14.5 x 21.5
+			fontSize = 12
+HarperCollins Publishers
+	<any>
+		0.6-0.772
+			trimSize = 21 x 30
+			fontSize = 12
+Bloomsbury Publishing
+	Bloomsbury Education:
+		0.5-0.6
+			trimSize = 10 x 20
+			fontSize = 12
+		0.6-0.772
+			trimSize = 16 x 23
+			fontSize = 12
+	Methuen Drama
+		<any>
+			trimSize = 13 x 20
+			fontSize = 12
+	Oberon Books
+		0.48-0.6
+			trimSize = 13 x 21
+			fontSize = 12
+		0.6-0.772
+			trimSize = 13 x 20
+			fontSize = 12
+		0.772-0.985
+			trimSize = 22 x 26
+			fontSize = 12
+		0.985-1
+			trimSize= 25 x 25
+			fontSize = 14
+		1-99999
+			trimSize = 30 x 25
+			fontSize = 14
+	The Arden Shakespeare
+		<any>
+			trimSize = 13 x 20
+			fontSize = 12
+Thames and Hudson OR Thames & Hudson
+	<any>
+		0.6-0.772
+			trimSize = 15 x 23
+			fontSize = 12

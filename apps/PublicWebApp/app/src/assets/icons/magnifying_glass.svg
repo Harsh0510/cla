@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="21px" viewBox="0 0 22 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/search/black</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-SE" transform="translate(-268.000000, -98.000000)" stroke="#006074" stroke-width="3">
+            <g id="Group-3" transform="translate(30.000000, 94.000000)">
+                <g id="icons/search/black" transform="translate(250.000000, 13.500000) scale(-1, 1) translate(-250.000000, -13.500000) translate(240.000000, 4.000000)">
+                    <circle id="Oval" cx="8" cy="8" r="6.5"></circle>
+                    <path d="M13.2945347,13.101674 L20,19" id="Path-5" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

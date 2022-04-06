@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../ONIX_BookProduct_RNG_schema+codes_Issue_40/ONIX_BookProduct_3.0_reference.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<ONIXMessage xmlns="http://ns.editeur.org/onix/3.0/reference" release="3.0">
+	<Header>
+		<Sender>
+			<SenderName>CLA</SenderName>
+		</Sender>
+		<SentDateTime>20180903</SentDateTime>
+	</Header>
+	<Product>
+		<RecordReference>uk.co.cla.1469-8552-2016-01-199</RecordReference>
+		<ProductIdentifier>
+			<ProductIDType>01</ProductIDType>
+			<IDTypeName>CLA content identifier</IDTypeName>
+			<IDValue>1469-8552-2016-01-199</IDValue>
+		</ProductIdentifier>
+		<DescriptiveDetail>
+			<ProductForm/>
+			<ContentForm>MI</ContentForm>
+			<Collection>
+				<CollectionType>10</CollectionType>
+				<CollectionIdentifier>
+					<CollectionIDType>02</CollectionIDType>
+					<IDTypeName>ISSN</IDTypeName>
+					<IDValue>1469-8552</IDValue>
+				</CollectionIdentifier>
+				<TitleDetail>
+					<TitleType>02</TitleType>
+					<TitleElement>
+						<SequenceNumber>1</SequenceNumber>
+						<TitleElementLevel>01</TitleElementLevel>
+						<TitleText>BBC History Magazine</TitleText>
+					</TitleElement>
+					<TitleStatement>BBC History Magazine</TitleStatement>
+				</TitleDetail>
+			</Collection>
+			<TitleDetail>
+				<TitleType>01</TitleType>
+				<TitleElement>
+					<SequenceNumber>1</SequenceNumber>
+					<TitleElementLevel>01</TitleElementLevel>
+					<TitleText>BBC History Magazine</TitleText>
+				</TitleElement>
+				<PartNumber parttype="02">January 2016</PartNumber>
+				<TitleStatement>BBC History Magazine - January 2016</TitleStatement>
+			</TitleDetail>
+			<Contributor>
+				<SequenceNumber>1</SequenceNumber>
+				<ContributorRole>B01</ContributorRole>
+				<PersonName>Rob Attar</PersonName>
+				<PersonNameInverted>Attar, Rob</PersonNameInverted>
+			</Contributor>
+			<Language>
+				<LanguageRole>01</LanguageRole>
+				<LanguageCode>eng</LanguageCode>
+				<CountryCode>GB</CountryCode>
+			</Language>
+			<Extent>
+				<ExtentType>00</ExtentType>
+				<ExtentValue>98</ExtentValue>
+				<ExtentUnit>03</ExtentUnit>
+			</Extent>
+			<Subject>
+				<SubjectSchemeIdentifier>24</SubjectSchemeIdentifier>
+				<SubjectSchemeName>CLA: Subject</SubjectSchemeName>
+				<SubjectCode>HIS</SubjectCode>
+				<SubjectHeadingText>History</SubjectHeadingText>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+				<SubjectSchemeName>BIC subject category</SubjectSchemeName>
+				<SubjectCode>HBG</SubjectCode>
+			</Subject>
+			<Subject>
+				<SubjectSchemeIdentifier>24</SubjectSchemeIdentifier>
+				<SubjectSchemeName>CLA: Publisher</SubjectSchemeName>
+				<SubjectHeadingText>Immediate Media/BBC Studios</SubjectHeadingText>
+			</Subject>
+		</DescriptiveDetail>
+		<CollateralDetail>
+			<TextContent>
+				<TextType>03</TextType>
+				<ContentAudience>00</ContentAudience>
+				<Text textformat="02">&lt;p&gt;Many people make &lt;b&gt;new year's resolutions&lt;/b&gt;: it's a tradition that goes back centuries, so it can be interesting to consider the resolutions that a few of history's best-known characters should have made as they began pivotal years in their lives. &lt;i&gt;BBC History&lt;/i&gt; asked a panel of historians to come up with suggestions for the likes of &lt;b&gt;Anne Boleyn in 1536, Douglas Haig in 1916 and King Harold II in 1066&lt;/b&gt;. You will find their ideas on page 29.&lt;/p&gt;&lt;p&gt;Harold II famously lost his life at the battle of Hastings, in a particularly unpleasant manner (if the legend is to be believed). Yet a violent death was nothing unusual in the Middle Ages, a period that was seemingly awash with blood. That, at least, is the popular conception of medieval life – but does this stereotype stand up to scrutiny? In the cover feature, Professor Hannah Skoda takes a fresh look at &lt;b&gt;medieval violence&lt;/b&gt;. Turn to page 22 to find out more.&lt;/p&gt;&lt;p&gt;Finally, January 2016 saw the airing of the BBC's latest big-budget costume drama, an adaptation of &lt;i&gt;War and Peace&lt;/i&gt;. Tolstoy's epic novel about the Russian war against Napoleon is regularly hailed – by those with the stamina to complete it – as one of the finest books ever written. On page 50, Dr Sarah Hudspith provides &lt;b&gt;a brief history of &lt;i&gt;War and Peace&lt;/i&gt;&lt;/b&gt;.&lt;/p&gt;</Text>
+			</TextContent>
+			<TextContent>
+				<TextType>04</TextType>
+				<ContentAudience>05</ContentAudience>
+				<Text textformat="05">
+					<div class="toc">
+						<ul>
+							<li>
+								<span class="label">Anniversaries</span>
+								<span class="page">6</span>
+							</li>
+							<li>
+								<span class="label">History now</span>
+								<span class="page">11</span>
+							</li>
+						</ul>
+					</div>
+				</Text>
+			</TextContent>
+			<SupportingResource>
+				<ResourceContentType>01</ResourceContentType>
+				<ResourceVersion>
+					<ResourceForm>02</ResourceForm>
+					<ResourceVersionFeature>
+						<ResourceVersionFeatureType>01</ResourceVersionFeatureType>
+						<FeatureValue>D503</FeatureValue>
+					</ResourceVersionFeature>
+					<ResourceLink>file://1469-8552-2016-01-199.png</ResourceLink>
+				</ResourceVersion>
+			</SupportingResource>
+		</CollateralDetail>
+		<PublishingDetail>
+			<Publisher>
+				<PublishingRole>01</PublishingRole>
+				<PublisherName>Immediate Media/BBC Studios</PublisherName>
+			</Publisher>
+			<CountryOfPublication>GB</CountryOfPublication>
+			<PublishingDate>
+				<PublishingDateRole>01</PublishingDateRole>
+				<Date dateformat="01">201601</Date>
+			</PublishingDate>
+			<CopyingDeclaration>
+				<DeclarationScope>01</DeclarationScope>
+				<DeclarationType>00</DeclarationType>
+				<DeclarationReason>00</DeclarationReason>
+				<DeclarationUnit>
+					<DeclarationUnitType>01</DeclarationUnitType>
+					<DeclarationUnitValue>2,10,17,20,28,34,35,41,56-60,70,76,81,86,90-92,96</DeclarationUnitValue>					<!-- 'print' page numbers (starts with 1) -->
+				</DeclarationUnit>
+			</CopyingDeclaration>
+		</PublishingDetail>
+	</Product>
+</ONIXMessage>

@@ -1,0 +1,1 @@
+This module is a collection of functions for validating request parameters and throwing relevant, consistent messages if validation fails.

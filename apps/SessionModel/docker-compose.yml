@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+
+   cla_session_model:
+    build: SessionModel
+    volumes:
+      - ./SessionModel/db_data:/var/lib/postgresql/data
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: cla_sm_pass
+      POSTGRES_DB: cla_sm_db
+      POSTGRES_USER: cla_sm_user
+    ports:
+      - "20000:5432"

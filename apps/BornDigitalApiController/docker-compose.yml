@@ -1,0 +1,20 @@
+version: '3.3'
+
+services:
+
+  bdapi_controller:
+    build: BornDigitalApiController
+    volumes:
+      - ./BornDigitalApiController/app:/app
+      - ./BornDigitalApiController/docker:/docker
+      - ./BornDigitalApiController/.logs:/root/.pm2/logs
+    ports:
+      - "13300:80"
+    environment:
+      NODE_ENV: development
+      BDAPI_AM_DB_HOST: cla_application_model
+      BDAPI_AM_DB_PORT: 5432
+      BDAPI_AM_DB_DB: cla_am_db
+      BDAPI_AM_DB_USER: cla_am_user
+      BDAPI_AM_DB_PASS: cla_am_pass
+      

@@ -1,0 +1,22 @@
+module.exports = {
+	content_detail: {
+		MAX_TITLE_LENGTH: 125,
+		MAX_CONTRIBUTOR_LENGTH: 55,
+		MAX_PUBLISHER_LENGTH: 55,
+	},
+	create_copy: {
+		MAX_TITLE_LENGTH: 275,
+		MAX_CONTRIBUTOR_LENGTH: 75,
+		MAX_PUBLISHER_LENGTH: 75,
+	},
+	create_copy_links: {
+		MAX_TITLE_LENGTH: 275,
+		MAX_CONTRIBUTOR_LENGTH: 75,
+		MAX_PUBLISHER_LENGTH: 75,
+	},
+	extract_view: {
+		MAX_TITLE_LENGTH: 275,
+		MAX_CONTRIBUTOR_LENGTH: 75,
+		MAX_PUBLISHER_LENGTH: 75,
+	},
+};

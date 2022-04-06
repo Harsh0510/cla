@@ -1,0 +1,10 @@
+{
+	"name": "push_to_azure",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"cli-color": "^2.0.0",
+		"moment": "^2.29.1",
+		"yargs": "^17.0.1"
+	}
+}

@@ -1,0 +1,2 @@
+Dummy file used as part of the generatePdfThumbnail tests.
+Do not delete me.

@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+
+  cla_application_model:
+    build: ApplicationModel
+    volumes:
+      - ./ApplicationModel/db_data:/var/lib/postgresql/data
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: cla_am_pass
+      POSTGRES_DB: cla_am_db
+      POSTGRES_USER: cla_am_user
+    ports:
+      - "19000:5432"

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="20px" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 17</title>
+    <desc>Created with Sketch.</desc>
+    <g id="00_Took_kit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="UI_Kit" transform="translate(-954.000000, -646.000000)" fill-rule="nonzero" stroke="#ffffff">
+            <g id="Group-17" transform="translate(955.000000, 647.000000)">
+                <path d="M10.9513393,1.77635684e-15 L1,1.77635684e-15 C0.44771525,1.8778099e-15 -5.39670589e-15,0.44771525 -5.32907052e-15,1 L-5.32907052e-15,16.758747 C-5.26143514e-15,17.3110318 0.44771525,17.758747 1,17.758747 L13.6946229,17.758747 C14.2469077,17.758747 14.6946229,17.3110318 14.6946229,16.758747 L14.6946229,11.4958569" id="Path"></path>
+                <path d="M2.5,15 L11.9500868,15" id="Line"></path>
+                <path d="M7,12.1613912 L7,8.55036213 C7,8.28514564 7.10535684,8.03079173 7.29289322,7.84325535 L13.4290418,1.70710678 C13.8195661,1.31658249 14.4527311,1.31658249 14.8432554,1.70710678 L17.0459809,3.90983236 C17.4365052,4.30035665 17.4365052,4.93352163 17.0459809,5.32404592 L10.9554952,11.4145316 C10.80108,11.5689468 10.6003631,11.668571 10.3840045,11.6981863 L7,12.1613912 Z" id="Path-3" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

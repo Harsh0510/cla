@@ -1,0 +1,19 @@
+FROM openresty/openresty:buster-fat
+
+RUN apt update
+RUN apt install -y openssh-server
+RUN echo "root:Docker!" | chpasswd
+COPY sshd_config /etc/ssh/
+COPY ssh_setup.sh /tmp
+RUN chmod -R +x /tmp/ssh_setup.sh && (sleep 1;/tmp/ssh_setup.sh 2>&1 > /dev/null)
+
+EXPOSE 80 2222
+
+COPY ./app/public /var/www
+COPY ./app/scripts /app/scripts
+COPY ./server /server
+COPY ./docker/nginx-conf /etc/nginx/conf.d
+COPY ./docker/run /docker/run
+COPY ./docker/nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
+
+CMD [ "/docker/run/run.sh" ]

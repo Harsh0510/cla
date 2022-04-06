@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 68 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 20</title>
+    <desc>Created with Sketch.</desc>
+    <g id="04_book_details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Book_details_V3_A-UNLOCK-EDIT-V1-Copy" transform="translate(-339.000000, -238.000000)" fill-rule="nonzero">
+            <g id="Group-20" transform="translate(342.000000, 241.000000)">
+                <path d="M34.0100377,14.3691644 C33.7303799,7.64421171 39.314352,2.87257747e-12 48.2508441,0 C59.9138126,-3.74742657e-12 62,11.3168077 62,15.7570554 C62,17.6355153 62,23.7164969 62,34" id="Path-8" stroke="#006074" stroke-width="5" stroke-linecap="round" transform="translate(48.000000, 17.000000) scale(-1, 1) translate(-48.000000, -17.000000) "></path>
+                <rect id="Rectangle" stroke="#006074" stroke-width="5" x="0" y="34" width="48" height="38" rx="10"></rect>
+                <ellipse id="Oval" fill="#006074" cx="24" cy="49.5" rx="6" ry="5.5"></ellipse>
+                <path d="M23.8100586,52.8 L23.8100586,59.9747372" id="Line-4" stroke="#006074" stroke-width="5" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

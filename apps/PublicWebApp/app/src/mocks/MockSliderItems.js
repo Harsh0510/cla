@@ -1,0 +1,98 @@
+export default [
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/0.png",
+		selected: false,
+		index: 1,
+		key: 1,
+	},
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/1.png",
+		selected: false,
+		index: 2,
+		key: 2,
+	},
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/2.png",
+		selected: false,
+		index: 3,
+		key: 3,
+	},
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/3.png",
+		selected: false,
+		index: 4,
+		key: 4,
+	},
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/4.png",
+		selected: false,
+		index: 5,
+		key: 5,
+	},
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/5.png",
+		selected: false,
+		index: 6,
+		key: 6,
+	},
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/6.png",
+		selected: false,
+		index: 7,
+		key: 7,
+	},
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/7.png",
+		selected: false,
+		index: 8,
+		key: 8,
+	},
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/8.png",
+		selected: false,
+		index: 9,
+		key: 9,
+	},
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/9.png",
+		selected: false,
+		index: 10,
+		key: 10,
+	},
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/10.png",
+		selected: false,
+		index: 11,
+		key: 11,
+	},
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/11.png",
+		selected: false,
+		index: 12,
+		key: 12,
+	},
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/12.png",
+		selected: false,
+		index: 13,
+		key: 13,
+	},
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/13.png",
+		selected: false,
+		index: 14,
+		key: 14,
+	},
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/14.png",
+		selected: false,
+		index: 15,
+		key: 15,
+	},
+	{
+		src: "https://occclastagestorage.blob.core.windows.net/pagepreviews/9780008189556/15.png",
+		selected: false,
+		index: 16,
+		key: 16,
+	},
+];

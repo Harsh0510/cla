@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../ONIX_BookProduct_RNG_schema+codes_Issue_40/ONIX_BookProduct_3.0_reference.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<ONIXMessage xmlns="http://ns.editeur.org/onix/3.0/reference" release="3.0">
+	<Header>
+		<Sender>
+			<SenderName>CLA</SenderName>
+		</Sender>
+		<SentDateTime>20180903</SentDateTime>
+	</Header>
+	<Product>
+		<RecordReference>CLAEP-00000003</RecordReference>
+		<NotificationType>03</NotificationType>
+		<RecordSourceType>01</RecordSourceType>
+		<!-- should perhaps be '08'? -->
+		<ProductIdentifier>
+			<ProductIDType>02</ProductIDType>
+			<IDValue>1407160133</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>03</ProductIDType>
+			<IDValue>9781407160139</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>15</ProductIDType>
+			<IDValue>9781407160139</IDValue>
+		</ProductIdentifier>
+		<DescriptiveDetail>
+			<ProductComposition>00</ProductComposition>
+			<ProductForm>BC</ProductForm>
+			<Collection>
+				<CollectionType>10</CollectionType>
+				<TitleDetail>
+					<TitleType>01</TitleType>
+					<TitleElement>
+						<TitleElementLevel>02</TitleElementLevel>
+						<TitleText textcase="02">National Curriculum Textbooks</TitleText>
+					</TitleElement>
+				</TitleDetail>
+			</Collection>
+			<TitleDetail>
+				<TitleType>01</TitleType>
+				<TitleElement>
+					<TitleElementLevel>01</TitleElementLevel>
+					<TitleText textcase="02">English Textbook (Year 3)</TitleText>
+				</TitleElement>
+			</TitleDetail>
+			<Contributor>
+				<SequenceNumber>1</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<!-- "A01" = "Author" -->
+				<PersonNameInverted>Casey, Catherine</PersonNameInverted>
+				<NamesBeforeKey>Catherine</NamesBeforeKey>
+				<KeyNames>Casey</KeyNames>
+			</Contributor>
+			<Language>
+				<LanguageRole>01</LanguageRole>
+				<LanguageCode>eng</LanguageCode>
+			</Language>
+			<Extent>
+				<ExtentType>06</ExtentType>
+				<!-- extent type "06" = "Production page count" -->
+				<ExtentValue>80</ExtentValue>
+				<ExtentUnit>03</ExtentUnit>
+			</Extent>
+			<Subject>
+				<SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+				<!-- 12 = "BIC subject category" - see http://www.bic.org.uk/files/pdfs/101201%20bic2.1%20complete%20rev.pdf -->
+				<SubjectSchemeVersion>2.1</SubjectSchemeVersion>
+				<SubjectCode>YQC</SubjectCode>
+				<!-- "YQC" = English language & literacy -->
+			</Subject>
+		</DescriptiveDetail>
+		<CollateralDetail>
+			<TextContent>
+				<TextType>04</TextType>
+				<!-- "04" = "Table of contents" -->
+				<ContentAudience>00</ContentAudience>
+				<!-- "00" = "Unrestricted" -->
+				<Text textformat="05"><!-- "05" = "XHTML" -->
+					<ul>
+						<li>How to use this book</li>
+						<li>Grammatical words</li>
+						<li><ul>
+								<li>Verbs: present perfect tense</li>
+								<li>Adverbs</li>
+								<li>Co-ordinating conjunctions</li>
+								<li>Subordinating conjunctions</li>
+								<li>Clauses</li>
+								<li>Determiners</li>
+								<li>Prepositions</li>
+								<li>Pronouns</li>
+							</ul></li>
+						<li>Punctuation</li>
+						<li><ul>
+								<li>Apostrophes for possession</li>
+								<li>Inverted commas</li>
+							</ul></li>
+						<li>Vocabulary</li>
+						<li><ul>
+								<li>Prefixes</li>
+								<li>Adding suffixes</li>
+								<li>Adding suffixes: ation</li>
+								<li>Adding suffixes: ly</li>
+								<li>Adding suffixes: ous</li>
+								<li>Word families</li>
+							</ul></li>
+						<li>Spelling</li>
+						<li><ul>
+								<li>Spelling and sound: y</li>
+								<li>Spelling and sound: ou</li>
+								<li>Spelling and sound: ei, eigh, ey</li>
+								<li>Word endings: ture and sure</li>
+								<li>Word endings: sion</li>
+								<li>Word endings: tion, sion, ssion, cian</li>
+								<li>Tricky endings</li>
+								<li>Tricky sounds</li>
+								<li>Tricky words</li>
+								<li>Homophones</li>
+								<li>Using a dictionary</li>
+							</ul></li>
+						<li>Reading</li>
+						<li><ul>
+								<li>Recognising types of poetry</li>
+								<li>Identifying main ideas</li>
+								<li>Summarising main ideas</li>
+								<li>Retrieving and recording information</li>
+								<li>Identifying themes and conventions</li>
+								<li>Making inferences</li>
+								<li>Making predictions</li>
+								<li>Words in context</li>
+								<li>Language features</li>
+								<li>Presentational features</li>
+								<li>Asking questions when reading</li>
+							</ul></li>
+						<li>Writing</li>
+						<li><ul>
+								<li>Paragraphs</li>
+								<li>Headings and subheadings</li>
+								<li>Creating characters</li>
+								<li>Creating a setting</li>
+								<li>Creating a plot</li>
+								<li>Evaluating and editing text</li>
+								<li>Proofreading</li>
+							</ul></li>
+						<li>Word list</li>
+					</ul>
+				</Text>
+			</TextContent>
+		</CollateralDetail>
+		<PublishingDetail>
+			<Publisher>
+				<PublishingRole>01</PublishingRole>
+				<PublisherName>Scholastic</PublisherName>
+				<Website>
+					<WebsiteRole>01</WebsiteRole>
+					<WebsiteLink>https://www.scholastic.co.uk/</WebsiteLink>
+				</Website>
+			</Publisher>
+			<PublishingDate>
+				<PublishingDateRole>01</PublishingDateRole>
+				<!-- "01" = "[Normal] Publication date" -->
+				<Date>20160901</Date>
+			</PublishingDate>
+			<!-- following sales rights info dummy data for this title -->
+			<SalesRights>
+				<SalesRightsType>01</SalesRightsType>
+				<Territory>
+					<CountriesIncluded>GB IE AU NZ ZA</CountriesIncluded>
+				</Territory>
+			</SalesRights>
+			<SalesRights>
+				<SalesRightsType>03</SalesRightsType>
+				<Territory>
+					<CountriesIncluded>US CA</CountriesIncluded>
+				</Territory>
+			</SalesRights>
+		</PublishingDetail>
+	</Product>
+</ONIXMessage>

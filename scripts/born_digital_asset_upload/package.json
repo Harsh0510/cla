@@ -1,0 +1,45 @@
+{
+	"name": "bdapi_asset_upload",
+	"private": true,
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"scripts": {
+		"lint": "eslint --max-warnings=0 './{src,test}/**/*.{js,ts}'",
+		"lint:fix": "eslint --max-warnings=0 './{src,test}/**/*.{js,ts}' --fix",
+		"test": "jest",
+		"format": "prettier --write './{src,test}/**/*.{js,ts}'",
+		"build": "tsc"
+	},
+	"dependencies": {
+		"@azure/storage-blob": "~12.9.0",
+		"@azure/storage-file-share": "~12.9.0",
+		"@types/jest": "~27.4.1",
+		"@types/node": "^16.11.0",
+		"@types/pg": "~8.6.5",
+		"@types/shell-quote": "~1.7.1",
+		"@typescript-eslint/eslint-plugin": "~5.15.0",
+		"@typescript-eslint/parser": "~5.15.0",
+		"babel-jest": "~27.5.1",
+		"cheerio": "^1.0.0-rc.10",
+		"css-select": "^4.2.1",
+		"dotenv": "~16.0.0",
+		"eslint": "~8.11.0",
+		"eslint-config-prettier": "~8.5.0",
+		"eslint-plugin-prettier": "~4.0.0",
+		"fast-deep-equal": "^3.1.3",
+		"fs-extra": "~10.0.1",
+		"jest": "~27.5.1",
+		"pg": "~8.7.3",
+		"prettier": "~2.6.0",
+		"sanitize-html": "^2.7.0",
+		"sax": "^1.2.4",
+		"shell-quote": "~1.7.3",
+		"ts-jest": "~27.1.3",
+		"typescript": "~4.6.2"
+	},
+	"devDependencies": {
+		"@types/fs-extra": "^9.0.13",
+		"@types/sanitize-html": "^2.6.2",
+		"@types/sax": "^1.2.4"
+	}
+}

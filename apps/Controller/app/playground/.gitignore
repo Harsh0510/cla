@@ -1,0 +1,8 @@
+**/*.pdf
+**/*.xml
+**/*.tar
+generate_users
+wonde.js
+out.txt
+index.js
+test.js

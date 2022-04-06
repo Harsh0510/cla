@@ -1,0 +1,11 @@
+{
+	"name": "pardot_csv_to_sql",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"csv-parser": "^2.3.0",
+		"pg": "^7.11.0",
+		"prompts": "^2.1.0",
+		"xlsx": "^0.15.1"
+	}
+}

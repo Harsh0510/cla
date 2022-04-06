@@ -1,0 +1,12 @@
+{
+	"name": "extract_sendgrid_data",
+	"private": true,
+	"scripts": {
+		"main": "node index.js"
+	},
+	"dependencies": {
+		"xlsx": "~0.17.2",
+		"pg": "~8.7.1",
+		"prompts": "~2.4.2"
+	}
+}

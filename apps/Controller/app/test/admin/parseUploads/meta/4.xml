@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../ONIX_BookProduct_RNG_schema+codes_Issue_40/ONIX_BookProduct_3.0_reference.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<ONIXMessage xmlns="http://ns.editeur.org/onix/3.0/reference" release="3.0">
+	<Header>
+		<Sender>
+			<SenderName>CLA</SenderName>
+		</Sender>
+		<SentDateTime>20180924</SentDateTime>
+	</Header>
+	<Product>
+		<RecordReference>CLAEP-00000004</RecordReference>
+		<NotificationType>03</NotificationType>
+		<RecordSourceType>01</RecordSourceType>
+		<!-- should perhaps be '08'? -->
+		<ProductIdentifier>
+			<ProductIDType>02</ProductIDType>
+			<IDValue>1910504734</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>03</ProductIDType>
+			<IDValue>9781910504734</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>15</ProductIDType>
+			<IDValue>9781910504734</IDValue>
+		</ProductIdentifier>
+		<DescriptiveDetail>
+			<ProductComposition>00</ProductComposition>
+			<ProductForm>BC</ProductForm>
+			<Collection>
+				<CollectionType>10</CollectionType>
+				<TitleDetail>
+					<TitleType>01</TitleType>
+					<TitleElement>
+						<TitleElementLevel>02</TitleElementLevel>
+						<TitleText textcase="02">Mathsteasers</TitleText>
+					</TitleElement>
+				</TitleDetail>
+			</Collection>
+			<TitleDetail>
+				<TitleType>01</TitleType>
+				<TitleElement>
+					<TitleElementLevel>01</TitleElementLevel>
+					<TitleText textcase="02">The 3rd Book of Mathsteasers for Years 6–8</TitleText>
+				</TitleElement>
+			</TitleDetail>
+			<Contributor>
+				<SequenceNumber>1</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<!-- "A01" = "Author" -->
+				<PersonNameInverted>Gardiner, Tony</PersonNameInverted>
+				<NamesBeforeKey>Tony</NamesBeforeKey>
+				<KeyNames>Gardiner</KeyNames>
+			</Contributor>
+			<Language>
+				<LanguageRole>01</LanguageRole>
+				<LanguageCode>eng</LanguageCode>
+			</Language>
+			<Extent>
+				<ExtentType>06</ExtentType>
+				<!-- extent type "06" = "Production page count" -->
+				<ExtentValue>144</ExtentValue>
+				<ExtentUnit>03</ExtentUnit>
+			</Extent>
+			<Subject>
+				<SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+				<!-- 12 = "BIC subject category" - see http://www.bic.org.uk/files/pdfs/101201%20bic2.1%20complete%20rev.pdf -->
+				<SubjectSchemeVersion>2.1</SubjectSchemeVersion>
+				<SubjectCode>PB</SubjectCode>
+				<!-- "PB" = Mathematics -->
+			</Subject>
+		</DescriptiveDetail>
+		<CollateralDetail>
+			<TextContent>
+				<TextType>04</TextType>
+				<!-- "04" = "Table of contents" -->
+				<ContentAudience>00</ContentAudience>
+				<!-- "00" = "Unrestricted" -->
+				<Text textformat="05"><!-- "05" = "XHTML" -->
+					<ul>
+						<li>Counting and place value</li>
+						<li>Arithmetic: all four operations</li>
+						<li>Fractions</li>
+						<li>Decimals</li>
+						<li>Measurement</li>
+						<li>Word problems</li>
+						<li>Percentages</li>
+						<li>Ratio</li>
+						<li>Pre-algebra</li>
+						<li>Perimeter, area and volume</li>
+						<li>Geometry</li>
+						<li>Position and negative numbers</li>
+						<li>Appendix: For the Teacher or Parent</li>
+					</ul>
+				</Text>
+			</TextContent>
+		</CollateralDetail>
+		<PublishingDetail>
+			<Publisher>
+				<PublishingRole>01</PublishingRole>
+				<PublisherName>Maths – No Problem!</PublisherName>
+				<Website>
+					<WebsiteRole>01</WebsiteRole>
+					<WebsiteLink>https://mathsnoproblem.com/</WebsiteLink>
+				</Website>
+			</Publisher>
+			<PublishingDate>
+				<PublishingDateRole>01</PublishingDateRole>
+				<!-- "01" = "[Normal] Publication date" -->
+				<Date>20180101</Date><!-- dummy value -->
+			</PublishingDate>
+			<!-- following sales rights info dummy data for this title -->
+			<SalesRights>
+				<SalesRightsType>01</SalesRightsType>
+				<Territory>
+					<CountriesIncluded>GB IE AU NZ ZA</CountriesIncluded>
+				</Territory>
+			</SalesRights>
+			<SalesRights>
+				<SalesRightsType>03</SalesRightsType>
+				<Territory>
+					<CountriesIncluded>US CA</CountriesIncluded>
+				</Territory>
+			</SalesRights>
+		</PublishingDetail>
+	</Product>
+</ONIXMessage>

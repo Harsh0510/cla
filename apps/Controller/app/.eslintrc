@@ -1,0 +1,27 @@
+{
+	"extends": [
+		"plugin:prettier/recommended"
+	],
+	"plugins": [
+		"prettier"
+	],
+	"env": {
+		"jasmine": true,
+		"jest": true,
+		"node": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2018
+	},
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{
+				"useTabs": true,
+				"printWidth": 150
+			}
+		],
+		"no-debugger": 0,
+		"no-unused-vars": 0
+	}
+}

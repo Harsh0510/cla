@@ -1,0 +1,90 @@
+<mjml>
+	<mj-head>
+		<mj-title>Reset Password</mj-title>
+		<mj-style>
+			a { color:#00727f; text-decoration:underline; font-size:12px; }
+			.tvf-cla-white-link a { color:#ffffff; text-decoration:underline; font-size:12px; }
+		</mj-style>
+		<mj-style inline="inline">
+			a { color:#00727f; text-decoration:underline; font-size:12px; }
+			.tvf-cla-white-link a { color:#ffffff; text-decoration:underline; font-size:12px; }
+		</mj-style>
+	</mj-head>
+	<mj-body>
+		<!-- top thin bar -->
+		<mj-section padding="0" background-color="#006372">
+			<mj-column background-color="#006372">
+				<mj-spacer height="8px" />
+			</mj-column>
+			<mj-column background-color="#00727f">
+				<mj-spacer height="8px" />
+			</mj-column>
+		</mj-section>
+
+		<!-- top thicker white bar with logo -->
+		<mj-section padding="20px 0 20px 0" background-color="white">
+			<mj-column>
+				<mj-image href="{{= it.baseUrl }}" width="225px" height="27px" src="{{= it.imageBaseUrl }}/ep_logo.png" alt="" title="Education Platform" />
+			</mj-column>
+		</mj-section>
+
+		<!-- icon -->
+		<!-- {{ if (it.icon) { }} -->
+		<mj-section padding="10px 10px 0 10px" background-color="#413c4b">
+			<mj-column>
+				<mj-image width="58px" height="58px" src="{{= it.imageBaseUrl }}/{{= it.icon }}.png" alt="" />
+			</mj-column>
+		</mj-section>
+		<!-- {{ } }} -->
+
+		<!-- body -->
+		<mj-section padding="10px 0 10px 0" background-color="#413c4b">
+			<mj-column width="340px">
+				<!-- {{ if (it.title) { }} -->
+				<mj-text color="#ffffff" align="center" font-size="28px" font-weight="bold">
+					{{! it.title }}
+				</mj-text>
+				<!-- {{ } }} -->
+				<mj-text align="center" color="#ffffff" line-height="16px" css-class="tvf-cla-white-link">
+					{{= it.content }}
+				</mj-text>
+				<!-- {{ if (it.cta) { }} -->
+				<mj-button href="{{= it.cta.url }}" background-color="#00727f" border-radius="0" font-size="18px">
+					{{= it.cta.title }}
+				</mj-button>
+				<!-- {{ } }} -->
+			</mj-column>
+		</mj-section>
+
+		<!-- secondary body -->
+		<mj-section padding="20px 0" background-color="#e7f4c5" padding="0">
+			<mj-column width="340px" padding="0">
+				<mj-text align="center" color="#333333" font-size="12px" line-height="16px">
+					<!-- {{ if (it.secondary_content) { }} -->
+					{{= it.secondary_content }}
+					<!-- {{ } else { }} -->
+					If you believe you may have received this email in error, please contact
+					<a href="mailto:support@educationplatform.zendesk.com">CLA Education Platform help desk</a>
+					<br/><br/>
+					To manage the notifications you receive from us, login to the <a href="{{= it.baseUrl }}/profile/my-details">My Details page</a>.
+					<!-- {{ } }} -->
+				</mj-text>
+			</mj-column>
+		</mj-section>
+
+		<!-- footer -->
+		<mj-section padding="0" background-color="#006372" padding="0">
+			<mj-column background-color="#006372" padding="20px 25px 20px 25px">
+				<mj-image padding="0" align="left" width="173px" height="15px" src="{{= it.imageBaseUrl }}/cla_logo.png" alt="Copyright Licencing Agency" />
+			</mj-column>
+			<mj-column background-color="#00727f" padding="20px 25px">
+				<mj-text align="left" color="#ffffff" padding="0 0 2px 0" font-size="10px">
+					5th Floor, Shackleton House, Hays Galleria
+				</mj-text>
+				<mj-text align="left" color="#ffffff" padding="0" font-size="10px">
+					4 Battle Bridge Lane, London SE1 2HX
+				</mj-text>
+			</mj-column>
+		</mj-section>
+	</mj-body>
+</mjml>

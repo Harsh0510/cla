@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../ONIX_BookProduct_RNG_schema+codes_Issue_40/ONIX_BookProduct_3.0_reference.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<ONIXMessage xmlns="http://ns.editeur.org/onix/3.0/reference" release="3.0">
+	<Header>
+		<Sender>
+			<SenderName>CLA</SenderName>
+		</Sender>
+		<SentDateTime>20180903</SentDateTime>
+	</Header>
+	<Product>
+		<RecordReference>CLAEP-00000001</RecordReference>
+		<NotificationType>03</NotificationType>
+		<RecordSourceType>01</RecordSourceType>
+		<!-- should perhaps be '08'? -->
+		<ProductIdentifier>
+			<ProductIDType>02</ProductIDType>
+			<IDValue>0198412959</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>03</ProductIDType>
+			<IDValue>9780198412953</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>15</ProductIDType>
+			<IDValue>9780198412953</IDValue>
+		</ProductIdentifier>
+		<DescriptiveDetail>
+			<ProductComposition>00</ProductComposition>
+			<ProductForm>BC</ProductForm>
+			<Collection>
+				<CollectionType>10</CollectionType>
+				<TitleDetail>
+					<TitleType>01</TitleType>
+					<TitleElement>
+						<TitleElementLevel>02</TitleElementLevel>
+						<TitleText textcase="02">AQA A Level Maths</TitleText>
+					</TitleElement>
+				</TitleDetail>
+			</Collection>
+			<TitleDetail>
+				<TitleType>01</TitleType>
+				<TitleElement>
+					<TitleElementLevel>01</TitleElementLevel>
+					<TitleText textcase="02">AQA A Level Maths: Year 1 / AS Student Book</TitleText>
+				</TitleElement>
+			</TitleDetail>
+			<Contributor>
+				<SequenceNumber>1</SequenceNumber>
+				<ContributorRole>A01</ContributorRole><!-- "A01" = "Author" -->
+				<PersonNameInverted>Bowles, David</PersonNameInverted>
+				<NamesBeforeKey>David</NamesBeforeKey>
+				<KeyNames>Bowles</KeyNames>
+			</Contributor>
+			<Contributor>
+				<SequenceNumber>2</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<PersonNameInverted>Jefferson, Brian</PersonNameInverted>
+				<NamesBeforeKey>Brian</NamesBeforeKey>
+				<KeyNames>Jefferson</KeyNames>
+			</Contributor>
+			<Contributor>
+				<SequenceNumber>3</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<PersonNameInverted>Mullan, Eddie</PersonNameInverted>
+				<NamesBeforeKey>Eddie</NamesBeforeKey>
+				<KeyNames>Mullan</KeyNames>
+			</Contributor>
+			<Contributor>
+				<SequenceNumber>4</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<PersonNameInverted>Rayneau, John</PersonNameInverted>
+				<NamesBeforeKey>John</NamesBeforeKey>
+				<KeyNames>Rayneau</KeyNames>
+			</Contributor>
+			<Contributor>
+				<SequenceNumber>5</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<PersonNameInverted>Rowland, Mark</PersonNameInverted>
+				<NamesBeforeKey>Mark</NamesBeforeKey>
+				<KeyNames>Rowland</KeyNames>
+			</Contributor>
+			<Contributor>
+				<SequenceNumber>6</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<PersonNameInverted>Wagner, Robert</PersonNameInverted>
+				<NamesBeforeKey>Robert</NamesBeforeKey>
+				<KeyNames>Wagner</KeyNames>
+			</Contributor>
+			<Contributor>
+				<SequenceNumber>7</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<PersonNameInverted>Williams, Paul</PersonNameInverted>
+				<NamesBeforeKey>Paul</NamesBeforeKey>
+				<KeyNames>Williams</KeyNames>
+			</Contributor>
+			<Contributor>
+				<SequenceNumber>8</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<PersonNameInverted>Wiseman, Garry</PersonNameInverted>
+				<NamesBeforeKey>Garry</NamesBeforeKey>
+				<KeyNames>Wiseman</KeyNames>
+			</Contributor>
+			<Contributor>
+				<SequenceNumber>9</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<PersonNameInverted>Wood, Katie</PersonNameInverted>
+				<NamesBeforeKey>Katie</NamesBeforeKey>
+				<KeyNames>Wood</KeyNames>
+			</Contributor>
+			<Contributor>
+				<SequenceNumber>10</SequenceNumber>
+				<ContributorRole>B20</ContributorRole>
+				<PersonNameInverted>Baker, David</PersonNameInverted>
+				<NamesBeforeKey>David</NamesBeforeKey>
+				<KeyNames>Baker</KeyNames>
+			</Contributor>
+			<Language>
+				<LanguageRole>01</LanguageRole>
+				<LanguageCode>eng</LanguageCode>
+			</Language>
+			<Extent>
+				<ExtentType>06</ExtentType><!-- extent type "06" = "Production page count" -->
+				<ExtentValue>349</ExtentValue>
+				<ExtentUnit>03</ExtentUnit>
+			</Extent>
+			<Subject>
+				<SubjectSchemeIdentifier>12</SubjectSchemeIdentifier><!-- 12 = "BIC subject category" - see http://www.bic.org.uk/files/pdfs/101201%20bic2.1%20complete%20rev.pdf -->
+				<SubjectSchemeVersion>2.1</SubjectSchemeVersion>
+				<SubjectCode>PB</SubjectCode><!-- "PB" = mathematics -->
+			</Subject>
+		</DescriptiveDetail>
+		<CollateralDetail>
+			<TextContent>
+				<TextType>04</TextType><!-- "04" = "Table of contents" -->
+				<ContentAudience>00</ContentAudience><!-- "00" = "Unrestricted" -->
+				<Text textformat="05"><!-- "05" = "XHTML" -->
+					<ul>
+						<li>Chapter 1: Algebra 1</li>
+						<li>Chapter 2: Polynomials and the binomial theorem</li>
+						<li>Chapter 3: Trigonometry</li>
+						<li>Chapter 4: Differentiation</li>
+						<li>Chapter 5: Exponentials and logarithms</li>
+						<li>Chapter 6: Vectors</li>
+						<li>Chapter 7: Units and kinematics</li>
+						<li>Chapter 8: Forces and Newton's laws</li>
+					</ul>
+				</Text>
+			</TextContent>
+		</CollateralDetail>
+		<PublishingDetail>
+			<Publisher>
+				<PublishingRole>01</PublishingRole>
+				<!-- we're unlikely to be able to source ISNI values for all publishers -->
+				<PublisherIdentifier>
+					<PublisherIDType>16</PublisherIDType>
+					<!-- "16" = "ISNI" -->
+					<IDValue>0000000122929185</IDValue>
+				</PublisherIdentifier>
+				<PublisherName>Oxford University Press</PublisherName>
+				<Website>
+					<WebsiteRole>01</WebsiteRole>
+					<WebsiteLink>http://www.oup.com</WebsiteLink>
+				</Website>
+			</Publisher>
+			<PublishingDate>
+				<PublishingDateRole>01</PublishingDateRole><!-- "01" = "[Normal] Publication date" -->
+				<Date>20170406</Date>
+			</PublishingDate>
+			<!-- following sales rights info dummy data for this title -->
+			<SalesRights>
+				<SalesRightsType>01</SalesRightsType>
+				<Territory>
+					<CountriesIncluded>GB IE AU NZ ZA</CountriesIncluded>
+				</Territory>
+			</SalesRights>
+			<SalesRights>
+				<SalesRightsType>03</SalesRightsType>
+				<Territory>
+					<CountriesIncluded>US CA</CountriesIncluded>
+				</Territory>
+			</SalesRights>
+		</PublishingDetail>
+	</Product>
+</ONIXMessage>

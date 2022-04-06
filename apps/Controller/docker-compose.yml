@@ -1,0 +1,26 @@
+version: '3.3'
+
+services:
+
+  cla_controller:
+    build: Controller
+    volumes:
+      - ./Controller/app:/app
+      - ./Controller/docker:/docker
+      - ./Controller/.logs:/root/.pm2/logs
+    ports:
+      - "13000:80"
+      - "13001:443"
+    environment:
+      NODE_ENV: development
+      CLA_AM_DB_HOST: cla_application_model
+      CLA_AM_DB_PORT: 5432
+      CLA_AM_DB_DB: cla_am_db
+      CLA_AM_DB_USER: cla_am_user
+      CLA_AM_DB_PASS: cla_am_pass
+      CLA_SESSION_DB_HOST: cla_session_model
+      CLA_SESSION_DB_PORT: 5432
+      CLA_SESSION_DB_DB: cla_sm_db
+      CLA_SESSION_DB_USER: cla_sm_user
+      CLA_SESSION_DB_PASS: cla_sm_pass
+      

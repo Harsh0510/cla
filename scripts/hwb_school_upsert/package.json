@@ -1,0 +1,11 @@
+{
+	"name": "hwb_school_upsert",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"csv-parser": "~3.0.0",
+		"pg": "~8.5.1",
+		"prompts": "~2.4.0",
+		"xlsx": "^0.16.9"
+	}
+}

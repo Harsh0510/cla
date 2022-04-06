@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="20px" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 16</title>
+    <desc>Created with Sketch.</desc>
+    <g id="00_Took_kit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="UI_Kit" transform="translate(-925.000000, -646.000000)" fill-rule="nonzero" stroke="#006074">
+            <g id="Group-16" transform="translate(926.000000, 647.000000)">
+                <path d="M9.84459883,1.24961109e-14 L1,1.24344979e-14 C0.44771525,1.25359509e-14 -6.76353751e-17,0.44771525 0,1 L-2.22044605e-16,16.758747 C1.80770036e-15,17.3110318 0.44771525,17.758747 1,17.758747 L13.6946229,17.758747 C14.2469077,17.758747 14.6946229,17.3110318 14.6946229,16.758747 L14.6946229,11.4958569" id="Path"></path>
+                <path d="M2.5,14 L11.9500868,14" id="Line"></path>
+                <path d="M2.5,12 L11.9500868,12" id="Line-Copy"></path>
+                <path d="M2.5,10 L10.1966146,10" id="Line-Copy-2"></path>
+                <path d="M2.5,8 L8.5,8" id="Line-Copy-3"></path>
+                <path d="M2.5,6 L7.2250434,6" id="Line-Copy-4"></path>
+                <path d="M2.5,4 L6.34830729,4" id="Line-Copy-5"></path>
+                <path d="M13.0093063,9.4321667 C10.3626045,6.85995558 9.03601038,5.07881627 9.02952406,4.08874877 C9.01979458,2.60364751 10.0441481,2 11.0175459,2 C11.7067352,2 12.3706554,2.35998684 13.0093063,3.07996051 C13.7089989,2.35998684 14.3937455,2 15.0635461,2 C16.0682471,2 16.9891574,2.57187205 16.9891574,4.08874877 C16.9891574,5.09999991 15.6625404,6.88113922 13.0093063,9.4321667 Z" id="Path-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

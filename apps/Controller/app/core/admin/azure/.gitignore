@@ -1,0 +1,10 @@
+watermark.png
+watermark.jpg
+bundle.js
+package.json
+package-lock.json
+bundle.tar.gz
+pagecount.txt
+*.png
+out.pdf
+*_errors.log

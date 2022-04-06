@@ -1,0 +1,3 @@
+# This file is a necessary hack so that docker-compose works properly with multiple docker-compose files.
+# See: https://github.com/docker/compose/issues/3568#issuecomment-279509578
+version: '3.3'

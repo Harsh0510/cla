@@ -1,0 +1,13 @@
+{
+	"name": "cla",
+	"private": true,
+	"version": "1.0.0",
+	"devDependencies": {
+		"eslint": "~8.0.0",
+		"lint-staged": "~11.2.3"
+	},
+	"lint-staged": {
+		"PublicWebApp/app/src/**/*.+(js|jsx|ts|tsx)": "eslint",
+		"Controller/app/(common|core|test)/**/*.+(js|jsx|ts|tsx)": "eslint"
+	}
+}

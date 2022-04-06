@@ -1,0 +1,5 @@
+.env
+azcopy
+azcopy_tmp
+*.log
+.env.*

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../ONIX_BookProduct_RNG_schema+codes_Issue_40/ONIX_BookProduct_3.0_reference.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<ONIXMessage xmlns="http://ns.editeur.org/onix/3.0/reference" release="3.0">
+	<Header>
+		<Sender>
+			<SenderName>CLA</SenderName>
+		</Sender>
+		<SentDateTime>20180903</SentDateTime>
+	</Header>
+	<Product>
+		<RecordReference>CLAEP-00000002</RecordReference>
+		<NotificationType>03</NotificationType>
+		<RecordSourceType>01</RecordSourceType>
+		<!-- should perhaps be '08'? -->
+		<ProductIdentifier>
+			<ProductIDType>02</ProductIDType>
+			<IDValue>1471892166</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>03</ProductIDType>
+			<IDValue>9781471892165</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>15</ProductIDType>
+			<IDValue>9781471892165</IDValue>
+		</ProductIdentifier>
+		<DescriptiveDetail>
+			<ProductComposition>00</ProductComposition>
+			<ProductForm>BC</ProductForm>
+			<Collection>
+				<CollectionType>10</CollectionType>
+				<TitleDetail>
+					<TitleType>01</TitleType>
+					<TitleElement>
+						<TitleElementLevel>02</TitleElementLevel>
+						<TitleText textcase="02">CCEA GCSE Science</TitleText>
+					</TitleElement>
+				</TitleDetail>
+			</Collection>
+			<TitleDetail>
+				<TitleType>01</TitleType>
+				<TitleElement>
+					<TitleElementLevel>01</TitleElementLevel>
+					<TitleText textcase="02">CCEA GCSE Chemistry</TitleText>
+				</TitleElement>
+			</TitleDetail>
+			<Contributor>
+				<SequenceNumber>1</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<!-- "A01" = "Author" -->
+				<PersonNameInverted>McFarland, Alyn G.</PersonNameInverted>
+				<NamesBeforeKey>Alyn G.</NamesBeforeKey>
+				<KeyNames>McFarland</KeyNames>
+			</Contributor>
+			<Contributor>
+				<SequenceNumber>2</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<PersonNameInverted>Henry, Nora</PersonNameInverted>
+				<NamesBeforeKey>Nora</NamesBeforeKey>
+				<KeyNames>Henry</KeyNames>
+			</Contributor>
+			<Language>
+				<LanguageRole>01</LanguageRole>
+				<LanguageCode>eng</LanguageCode>
+			</Language>
+			<Extent>
+				<ExtentType>06</ExtentType>
+				<!-- extent type "06" = "Production page count" -->
+				<ExtentValue>312</ExtentValue>
+				<ExtentUnit>03</ExtentUnit>
+			</Extent>
+			<Subject>
+				<SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+				<!-- 12 = "BIC subject category" - see http://www.bic.org.uk/files/pdfs/101201%20bic2.1%20complete%20rev.pdf -->
+				<SubjectSchemeVersion>2.1</SubjectSchemeVersion>
+				<SubjectCode>PN</SubjectCode>
+				<!-- "PN" = chemistry -->
+			</Subject>
+		</DescriptiveDetail>
+		<CollateralDetail>
+			<TextContent>
+				<TextType>04</TextType>
+				<!-- "04" = "Table of contents" -->
+				<ContentAudience>00</ContentAudience>
+				<!-- "00" = "Unrestricted" -->
+				<Text textformat="05"><!-- "05" = "XHTML" -->
+					<ul>
+						<li>Unit 1</li>
+						<li>
+							<ul>
+								<li>1 Atomic structure</li>
+								<li>2 Bonding, structure and nanoparticles</li>
+								<li>3 The Periodic Table</li>
+								<li>4 Quantitative chemistry</li>
+								<li>5 Acids, bases and salts</li>
+								<li>6 Chemical analysis, assessing purity and separating mixtures</li>
+								<li>7 Solubility</li>
+							</ul>
+						</li>
+						<li>Unit 2</li>
+						<li>
+							<ul>
+								<li>8 Metals and reactivity series</li>
+								<li>9 Redox, rusting and iron</li>
+								<li>10 Rates of reaction</li>
+								<li>11 Equilibrium</li>
+								<li>12 Organic chemistry</li>
+								<li>13 Quantitative chemistry</li>
+								<li>14 Electrochemistry</li>
+								<li>15 Energy changes in chemistry</li>
+								<li>16 Gas chemistry</li>
+							</ul>
+						</li>
+						<li>Appendix: Symbols, formulae and equations</li>
+						<li>Glossary</li>
+						<li>Index</li>
+						<li>Periodic Table</li>
+					</ul>
+				</Text>
+			</TextContent>
+		</CollateralDetail>
+		<PublishingDetail>
+			<Publisher>
+				<PublishingRole>01</PublishingRole>
+				<PublisherName>Hodder Education</PublisherName>
+				<Website>
+					<WebsiteRole>01</WebsiteRole>
+					<WebsiteLink>https://www.hoddereducation.co.uk/</WebsiteLink>
+				</Website>
+			</Publisher>
+			<PublishingDate>
+				<PublishingDateRole>01</PublishingDateRole>
+				<!-- "01" = "[Normal] Publication date" -->
+				<Date>20170630</Date>
+			</PublishingDate>
+			<!-- following sales rights info dummy data for this title -->
+			<SalesRights>
+				<SalesRightsType>01</SalesRightsType>
+				<Territory>
+					<CountriesIncluded>GB IE AU NZ ZA</CountriesIncluded>
+				</Territory>
+			</SalesRights>
+			<SalesRights>
+				<SalesRightsType>03</SalesRightsType>
+				<Territory>
+					<CountriesIncluded>US CA</CountriesIncluded>
+				</Territory>
+			</SalesRights>
+		</PublishingDetail>
+	</Product>
+	<Product>
+		<RecordReference>CLAEP-00000002</RecordReference>
+		<NotificationType>03</NotificationType>
+		<RecordSourceType>01</RecordSourceType>
+		<!-- should perhaps be '08'? -->
+		<ProductIdentifier>
+			<ProductIDType>02</ProductIDType>
+			<IDValue>1471807614</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>03</ProductIDType>
+			<IDValue>9781471807619</IDValue>
+		</ProductIdentifier>
+		<ProductIdentifier>
+			<ProductIDType>15</ProductIDType>
+			<IDValue>9781471807619</IDValue>
+		</ProductIdentifier>
+		<DescriptiveDetail>
+			<ProductComposition>00</ProductComposition>
+			<ProductForm>BC</ProductForm>
+			<Collection>
+				<CollectionType>10</CollectionType>
+				<TitleDetail>
+					<TitleType>01</TitleType>
+					<TitleElement>
+						<TitleElementLevel>02</TitleElementLevel>
+						<TitleText textcase="02">AQA A level Science</TitleText>
+					</TitleElement>
+				</TitleDetail>
+			</Collection>
+			<TitleDetail>
+				<TitleType>01</TitleType>
+				<TitleElement>
+					<TitleElementLevel>01</TitleElementLevel>
+					<TitleText textcase="02">AQA A Level Biology Student Book 1</TitleText>
+				</TitleElement>
+			</TitleDetail>
+			<Contributor>
+				<SequenceNumber>1</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<!-- "A01" = "Author" -->
+				<PersonNameInverted>Lowrie, Pauline</PersonNameInverted>
+				<NamesBeforeKey>Pauline</NamesBeforeKey>
+				<KeyNames>Lowrie</KeyNames>
+			</Contributor>
+			<Contributor>
+				<SequenceNumber>2</SequenceNumber>
+				<ContributorRole>A01</ContributorRole>
+				<PersonNameInverted>Smith, Mark</PersonNameInverted>
+				<NamesBeforeKey>Mark</NamesBeforeKey>
+				<KeyNames>Smith</KeyNames>
+			</Contributor>
+			<Language>
+				<LanguageRole>01</LanguageRole>
+				<LanguageCode>eng</LanguageCode>
+			</Language>
+			<Extent>
+				<ExtentType>06</ExtentType>
+				<!-- extent type "06" = "Production page count" -->
+				<ExtentValue>288</ExtentValue>
+				<ExtentUnit>03</ExtentUnit>
+			</Extent>
+			<Subject>
+				<SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+				<!-- 12 = "BIC subject category" - see http://www.bic.org.uk/files/pdfs/101201%20bic2.1%20complete%20rev.pdf -->
+				<SubjectSchemeVersion>2.1</SubjectSchemeVersion>
+				<SubjectCode>PS</SubjectCode><!-- "PS" = biology -->
+			</Subject>
+		</DescriptiveDetail>
+		<CollateralDetail>
+			<TextContent>
+				<TextType>04</TextType><!-- "04" = "Table of contents" -->
+				<ContentAudience>00</ContentAudience><!-- "00" = "Unrestricted" -->
+				<Text textformat="05"><!-- "05" = "XHTML" -->
+					<ul>
+						<li>Get the most from this book</li>
+						<li>1 Biological molecules</li>
+						<li>2 Enzymes</li>
+						<li>3 Cells</li>
+						<li>4 DNA and protein synthesis</li>
+						<li>5 The cell cycle</li>
+						<li>6 The immune system</li>
+						<li>7 Gas exchange</li>
+						<li>8 Digestion and absorption</li>
+						<li>9 Mass transport in animals</li>
+						<li>10 Mass transport in plants</li>
+						<li>11 Genetic diversity</li>
+						<li>12 Species and taxonomy</li>
+						<li>13 Biodiversity within a community</li>
+						<li>14 Developing mathematical skills</li>
+						<li>15 Developing practical skills</li>
+						<li>16 Exam preparation</li>
+						<li>Index</li> 
+						<li>Free online material</li> 
+						<li>Acknowledgements</li>
+					</ul>
+				</Text>
+			</TextContent>
+		</CollateralDetail>
+		<PublishingDetail>
+			<Publisher>
+				<PublishingRole>01</PublishingRole>
+				<PublisherName>Hodder Education</PublisherName>
+				<Website>
+					<WebsiteRole>01</WebsiteRole>
+					<WebsiteLink>https://www.hoddereducation.co.uk/</WebsiteLink>
+				</Website>
+			</Publisher>
+			<PublishingDate>
+				<PublishingDateRole>01</PublishingDateRole>
+				<!-- "01" = "[Normal] Publication date" -->
+				<Date>20150327</Date>
+			</PublishingDate>
+			<!-- following sales rights info dummy data for this title -->
+			<SalesRights>
+				<SalesRightsType>01</SalesRightsType>
+				<Territory>
+					<CountriesIncluded>GB IE AU NZ ZA</CountriesIncluded>
+				</Territory>
+			</SalesRights>
+			<SalesRights>
+				<SalesRightsType>03</SalesRightsType>
+				<Territory>
+					<CountriesIncluded>US CA</CountriesIncluded>
+				</Territory>
+			</SalesRights>
+		</PublishingDetail>
+	</Product>
+</ONIXMessage>

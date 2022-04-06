@@ -1,0 +1,14 @@
+{
+	"name": "generate_users",
+	"private": true,
+	"scripts": {
+		"main": "node index.js"
+	},
+	"dependencies": {
+		"csv": "~5.5.3",
+		"dotenv": "~10.0.0",
+		"prompts": "~2.4.2",
+		"yargs": "~17.2.1",
+		"pg": "~8.7.1"
+	}
+}

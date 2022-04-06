@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+
+  cla_public_web_app:
+    build: PublicWebApp
+    volumes:
+      - ./PublicWebApp/app/public:/var/www
+      - ./PublicWebApp/app/scripts:/app/scripts
+      - ./PublicWebApp/server:/server
+      - ./PublicWebApp/docker/nginx-conf:/etc/nginx/conf.d
+      - ./PublicWebApp/docker/run:/docker/run
+    ports:
+      - "16000:80"
+      - "16001:443"
+    restart: always
+    environment:
+      CLA_AM_DB_HOST: cla_application_model
+      CLA_AM_DB_PORT: 5432
+      CLA_AM_DB_DB: cla_am_db
+      CLA_AM_DB_USER: cla_am_user
+      CLA_AM_DB_PASS: cla_am_pass
+      CLA_SESSION_DB_HOST: cla_session_model
+      CLA_SESSION_DB_PORT: 5432
+      CLA_SESSION_DB_DB: cla_sm_db
+      CLA_SESSION_DB_USER: cla_sm_user
+      CLA_SESSION_DB_PASS: cla_sm_pass

@@ -1,0 +1,4 @@
+global.FormData = function FormDataMock() {
+	this.append = jest.fn();
+	this.entries = jest.fn();
+}

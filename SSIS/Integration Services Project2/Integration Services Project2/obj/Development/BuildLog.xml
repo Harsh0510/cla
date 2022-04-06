@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectInfo>
+    <Name>Integration Services Project2</Name>
+    <LastWriteTime>2019-06-13T13:53:23.1857785Z</LastWriteTime>
+    <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+    <Salt>1UZDIfOk</Salt>
+    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjmYiDy0Um0y90digG4L2aAAAAAACAAAAAAADZgAAwAAAABAAAACHwDn2845vx1fjeyq8du5sAAAAAASAAACgAAAAEAAAAL662KID/4olWShccgayOk0oAAAAKSdAWxZnOcnzU8l0WLEWM7y/nwI6Oh67jB7TAKGkCdcLZPQYJTFALhQAAADNKSqaH8xlZuqi+iFHscvBdIJpfQ==</LastKnownProtectedHashedPassword>
+  </ProjectInfo>
+  <LastBuildInfos>
+    <ProjectBuildItemInfo>
+      <Name>Package.dtsx</Name>
+      <LastWriteTime>2019-06-13T13:53:22.0183218Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+      <Salt>/imblK8y</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjmYiDy0Um0y90digG4L2aAAAAAACAAAAAAADZgAAwAAAABAAAACNwePwULNWK65FkF8tiRPMAAAAAASAAACgAAAAEAAAADj9+ysBd2GqqbukkSpB5KwoAAAArIYvBjP0J/BG/L2mkOcXGe3MhIqkE+Pf/lQ4v5D7IVB2f59SM46lkhQAAABPnKF+aDp9MP3xL4SCoRLwkuMrwg==</LastKnownProtectedHashedPassword>
+    </ProjectBuildItemInfo>
+  </LastBuildInfos>
+</BuildLog>

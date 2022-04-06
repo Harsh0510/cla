@@ -1,0 +1,28 @@
+# Copy to config.toml
+
+# Fill these all out
+SMTP_USERNAME = ""
+SMTP_PASSWORD = ""
+SMTP_HOST = ""
+SMTP_PORT = ""
+EMAIL_FROM = ""
+EMAIL_SUBJECT = "CLA Education Platform - New Azure credentials"
+AZURE_USERNAME = ""
+AZURE_TENANT = ""
+AZURE_PASSWORD = ""
+AZURE_STORAGE_ACCOUNT_NAME = ""
+AZURE_STORAGE_ACCOUNT_CONTAINER = ""
+
+[[target]]
+# Recipient of SAS token - will be automatically emailed
+email = "foo@bar.com"
+
+# For full list of permissions, see: https://docs.microsoft.com/en-us/rest/api/storageservices/create-service-sas#permissions-for-a-directory-container-or-blob
+permissions = "acdlrw"
+
+# Optional: a single IP address to restrict the SAS token
+ip = "82.34.253.204"
+
+[[target]]
+email = "another@email.com"
+permissions = "acdlrw"

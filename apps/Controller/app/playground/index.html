@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Endpoint Playground</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+
+		html {
+			font-family: sans-serif;
+			font-size: 12px;
+		}
+
+		.form-wrap {
+			margin: 0 auto;
+			width: 40em;
+		}
+
+		select,
+		textarea,
+		[type='text'] {
+			width: 100%;
+			box-sizing: border-box;
+			resize: none;
+			display: block;
+			border: 1px solid #333333;
+			border-radius: 0;
+			padding: 0.5em;
+			font-size: inherit;
+			font-family: inherit;
+			background: transparent;
+		}
+
+		textarea {
+			height: 15em;
+			font-family: monospace;
+			padding: 0.5em;
+		}
+
+		button {
+			background: #eeeeee;
+			display: block;
+			padding: 1em 2em;
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		h5 {
+			font-size: 1.25em;
+		}
+
+		h6 {
+			font-size: 1em;
+		}
+
+		#App {
+			display: flex;
+		}
+
+		#Left {
+			width: 50vw;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 1.5em;
+		}
+
+		pre {
+			background: #f2f2f2;
+			padding: 0.5em 1.5em;
+			font-size: 12px;
+			white-space: pre-wrap;
+		}
+
+		#Errors {
+			background: #fff2f2;
+			color: #cc0000;
+			font-weight: bold;
+		}
+
+		fieldset {
+			display: block;
+			margin-bottom: 1.5em;
+		}
+
+		[data-fields] {
+			color: inherit;
+			display: inline-block;
+			text-decoration: none;
+			padding: 0.5em 1em;
+			background: #333333;
+			color: #f2f2f2;
+			text-transform: uppercase;
+			font-size: 11px;
+			font-weight: bold;
+			margin: 0.3em;
+			cursor: pointer;
+		}
+
+		[data-fields]:hover {
+			opacity: 0.8;
+		}
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/5.24.6/jsoneditor.css"
+		integrity="sha256-mOQ79bfijaaAdLdY5IBQm0uLVaXcSHhn3sqzSXM8M0U=" crossorigin="anonymous" />
+</head>
+
+<body>
+	<div id="App">
+		<div id="Left">
+			<h5>Results</h5>
+			<div id="Res"></div>
+			<h5>Errors</h5>
+			<pre id="Errors"></pre>
+		</div>
+		<div class="form-wrap">
+			<h6>Presets</h6>
+			<div>Preset endpoints for easier testing. Feel free to add more.</div>
+			<select id="PresetSelector">
+				<option value="">(Select...)</option>
+				<optgroup label="Admin">
+					<option value='{"Field_Type": "json", "Field_Endpoint": "/admin/get-subjects", "Field_Body": ""}'>
+						Get subjects</option>
+					<option value='{"Field_Type": "json", "Field_Endpoint": "/admin/get-publishers", "Field_Body": ""}'>
+						Get publishers</option>
+					<option value='{"Field_Type": "json", "Field_Endpoint": "/admin/get-authors", "Field_Body": ""}'>Get
+						authors</option>
+					<option value='{"Field_Type": "json", "Field_Endpoint": "/admin/get-assets", "Field_Body": ""}'>Get
+						assets</option>
+					<option
+						value='{"Field_Type": "json", "Field_Endpoint": "/admin/get-rights-permitted", "Field_Body": ""}'>
+						Get rights permitted</option>
+					<option
+						value='{"Field_Type": "json", "Field_Endpoint": "/admin/get-rights-not-permitted", "Field_Body": ""}'>
+						Get rights not permitted</option>
+					<option
+						value='{"Field_FileDataName": "assets", "Field_Type": "binary", "Field_Endpoint": "/admin/validate", "Field_Body": ""}'>
+						Validate</option>
+					<option
+						value='{"Field_FileDataName": "assets", "Field_Type": "binary", "Field_Endpoint": "/admin/validate-and-upsert", "Field_Body": "%%Admin_ValidateUpsert%%"}'>
+						Validate + Upsert</option>
+					<option
+						value='{"Field_FileDataName": "assets", "Field_Type": "binary", "Field_Endpoint": "/admin/upload-to-azure", "Field_Body": "%%Admin_UploadToAzure%%"}'>
+						Upload to Azure</option>
+					<option
+						value='{"Field_Endpoint": "/admin/class-get-all", "Field_Body": "%%Admin_ClassGetAllForSchool%%"}'>
+						Class: Get all</option>
+					<option value='{"Field_Endpoint": "/admin/class-create", "Field_Body": "%%Admin_ClassCreate%%"}'>
+						Class: Create</option>
+					<option value='{"Field_Endpoint": "/admin/class-update", "Field_Body": "%%Admin_ClassUpdate%%"}'>
+						Class: Update</option>
+					<option value='{"Field_Endpoint": "/admin/class-delete", "Field_Body": ""}'>Class: Delete</option>
+					<option value='{"Field_Endpoint": "/admin/class-get-filters", "Field_Body": ""}'>Class: Get filters
+					</option>
+					<option
+						value='{"Field_Endpoint": "/admin/approved-domain-get-all", "Field_Body": "%%Admin_ApproveDomainGetAll%%"}'>
+						Approved Domain: Get all</option>
+					<option
+						value='{"Field_Endpoint": "/admin/approved-domain-create", "Field_Body": "%%Admin_ApproveDomainCreate%%"}'>
+						Approved Domain: Create</option>
+					<option
+						value='{"Field_Endpoint": "/admin/approved-domain-update", "Field_Body": "%%Admin_ApproveDomainUpdate%%"}'>
+						Approved Domain: Update</option>
+					<option
+						value='{"Field_Endpoint": "/admin/approved-domain-delete", "Field_Body": "%%Admin_ApproveDomainDelete%%"}'>
+						Approved Domain: Delete</option>
+					<option value='{"Field_Endpoint": "/admin/school-get-filters", "Field_Body": ""}'>School: Get
+						filters</option>
+					<option value='{"Field_Endpoint": "/admin/school-get-all", "Field_Body": "%%Admin_SchoolGetAll%%"}'>
+						School: Get all</option>
+					<option value='{"Field_Endpoint": "/admin/school-create", "Field_Body": "%%Admin_SchoolCreate%%"}'>
+						School: Create</option>
+					<option value='{"Field_Endpoint": "/admin/school-update", "Field_Body": "%%Admin_SchoolUpdate%%"}'>
+						School: Update</option>
+					<option value='{"Field_Endpoint": "/admin/school-delete", "Field_Body": ""}'>School: Delete</option>
+					<option value='{"Field_Endpoint": "/admin/asset-get-all", "Field_Body": "%%Admin_AssetGetAll%%"}'>
+						Asset: Get all</option>
+					<option value='{"Field_Endpoint": "/admin/asset-update", "Field_Body": "%%Admin_AssetUpdate%%"}'>
+						Asset: Update</option>
+					<option value='{"Field_Endpoint": "/admin/unlock-attempt-get-all", "Field_Body": ""}'>Get all for
+						Unlock Attempt</option>
+					<option value='{"Field_Endpoint": "/admin/extract-access-get-all", "Field_Body": ""}'>Get all for
+						Extract Access</option>
+					<option value='{"Field_Endpoint": "/admin/unlock-bulk", "Field_Body": "%%Admin_UnlockBulk%%"}'>
+						Unlock Bulk</option>
+					<option
+						value='{"Field_Endpoint": "/admin/publisher-get-all", "Field_Body": "%%Admin_PublisherInGetAll%%"}'>
+						Publisher : Get all</option>
+					<option
+						value='{"Field_Endpoint": "/admin/add-dummy-extract-accesses", "Field_Body": "%%Admin_AddDummyExtractAccesses%%"}'>
+						Add Dummy Extract Accesses</option>
+					<option value='{"Field_Endpoint": "/admin/force-async-tick", "Field_Body": ""}'>Force Async Tick
+					</option>
+					<option value='{"Field_Endpoint": "/admin/unlock-image-upload-get-filters", "Field_Body": ""}'>
+						Unlock Image Upload Filter</option>
+					<option
+						value='{"Field_Endpoint": "/admin/unlock-image-upload-get-all", "Field_Body": "%%Admin_UnlockImageUploadAll%%"}'>
+						Unlock Image Upload Get all</option>
+					<option value='{"Field_Endpoint": "/admin/unlock-image-upload-update", "Field_Body": ""}'>Unlock
+						Image Upload Update</option>
+					<option
+						value='{"Field_Endpoint": "/admin/home-screen-blog-category-update", "Field_Body": "%%Home_Screen_Blog_Category_Update%%"}'>
+						Home Screen Blog Category Update</option>
+					<option value='{"Field_Endpoint": "/admin/create-unlock-attempt-oids"}'>Create Unlock Attempt Oid
+					</option>
+					<option value='{"Field_Endpoint": "/admin/carousel-slide-create", "Field_Body": "%%Admin_CarouselCreate%%"}'>
+						Carousel: Create</option>
+					<option value='{"Field_Endpoint": "/admin/carousel-slide-get-all", "Field_Body": "%%Admin_CarouselGetAll%%"}'>
+						Carousel: Get all</option>
+					<option value='{"Field_Endpoint": "/admin/carousel-slide-update", "Field_Body": "%%Admin_CarouselUpdate%%"}'>
+						Carousel: Update</option>
+					<option value='{"Field_Endpoint": "/admin/carousel-slide-delete", "Field_Body": ""}'>Carousel: Delete</option>
+					<option value='{"Field_Endpoint": "/admin/asset-processing-log-get-all", "Field_Body": "%%Admin_AssetProcessingLogGetAll%%"}'>
+						Processing Log: Get all</option
+					>
+					<option value='{"Field_Endpoint": "/admin/asset-processing-log-get-filters", "Field_Body": ""}'>Processing Log: Get filters
+					</option>
+				</optgroup>
+				<optgroup label="Auth">
+					<option data-autosubmit="1" value='{"Field_Endpoint": "/auth/get-stuff", "Field_Body": ""}'>Get lots
+						of data</option>
+					<option value='{"Field_Endpoint": "/auth/activate", "Field_Body": "%%Auth_Activate%%"}'>Activate
+					</option>
+					<option value='{"Field_Endpoint": "/auth/get-countries", "Field_Body": ""}'>Get Countries</option>
+					<option value='{"Field_Endpoint": "/auth/get-my-details", "Field_Body": ""}'>Get my details</option>
+					<option
+						value='{"Field_Endpoint": "/auth/update-my-details", "Field_Body": "%%Auth_UpdateMyDetails%%"}'>
+						Update my details</option>
+					<option value='{"Field_Endpoint": "/auth/get-my-school-details", "Field_Body": ""}'>Get My School
+						Details</option>
+					<option value='{"Field_Endpoint": "/auth/get-schools", "Field_Body": ""}'>Get Schools</option>
+					<option value='{"Field_Endpoint": "/auth/login", "Field_Body": "%%Auth_Login%%"}'>Login</option>
+					<option value='{"Field_Endpoint": "/auth/register", "Field_Body": "%%Auth_Register%%"}'>Register
+					</option>
+					<option value='{"Field_Endpoint": "/auth/school-edit", "Field_Body": "%%Auth_SchoolEdit%%"}'>School
+						Edit</option>
+					<option value='{"Field_Endpoint": "/auth/user-approve", "Field_Body": "%%Auth_UserApprove%%"}'>User:
+						Approve</option>
+					<option
+						value='{"Field_Endpoint": "/auth/user-complete-password-reset", "Field_Body": "%%Auth_UserCompletePasswordReset%%"}'>
+						User: Complete Password Reset</option>
+					<option
+						value='{"Field_Endpoint": "/auth/user-confirm-email-change", "Field_Body": "%%Auth_UserConfirmEmailChange%%"}'>
+						User: Confirm Email Change</option>
+					<option value='{"Field_Endpoint": "/auth/user-create", "Field_Body": "%%Auth_UserCreate%%"}'>User:
+						Create</option>
+					<option
+						value='{"Field_Endpoint": "/auth/user-create-bulk", "Field_Body": "%%Auth_UserCreateBulk%%"}'>
+						User: Create Bulk</option>
+					<option value='{"Field_Endpoint": "/auth/user-delete", "Field_Body": "%%Auth_UserDelete%%"}'>User:
+						Delete</option>
+					<option value='{"Field_Endpoint": "/auth/user-get-filters", "Field_Body": ""}'>User: Get filters
+					</option>
+					<option value='{"Field_Endpoint": "/auth/user-get-all", "Field_Body": "%%Auth_UserGetAll%%"}'>User:
+						Get all</option>
+					<option
+						value='{"Field_Endpoint": "/auth/user-init-password-reset", "Field_Body": "%%Auth_UserInitPasswordReset%%"}'>
+						User: Init Password Reset</option>
+					<option value='{"Field_Endpoint": "/auth/user-reject", "Field_Body": "%%Auth_UserReject%%"}'>User:
+						Reject</option>
+					<option
+						value='{"Field_Endpoint": "/auth/user-resend-set-password", "Field_Body": "%%Auth_UserResendSetPassword%%"}'>
+						User: Resend 'Set Password' email</option>
+					<option
+						value='{"Field_Endpoint": "/auth/user-resend-verify", "Field_Body": "%%Auth_UserResendVerify%%"}'>
+						User: Resend 'Verify' email</option>
+					<option value='{"Field_Endpoint": "/auth/user-update", "Field_Body": "%%Auth_UserUpdate%%"}'>User:
+						Update</option>
+					<option value='{"Field_Endpoint": "/auth/verify", "Field_Body": "%%Auth_Verify%%"}'>Verify</option>
+					<option
+						value='{"Field_Endpoint": "/auth/get-is-domain-mapped-with-school", "Field_Body": "%%isApprovedDomainSchool%%"}'>
+						isApprovedDomainSchool</option>
+				</optgroup>
+				<optgroup label="Public">
+					<option value='{"Field_Endpoint": "/public/asset-get-one", "Field_Body": ""}'>Get one asset</option>
+					<option value='{"Field_Endpoint": "/public/unlock", "Field_Body": "{\"isbn13\": \"9870836489178\"}"}'>Unlock asset</option>
+					<option value='{"Field_Endpoint": "/public/course-get-one", "Field_Body": "{\"oid\": 1}"}'>Get one course</option>
+					<option value='{"Field_Endpoint": "/public/course-get-all-for-school", "Field_Body": ""}'>Get all courses</option>
+					<option value='{"Field_Endpoint": "/public/course-search", "Field_Body": ""}'>Course Search</option>
+					<option value='{"Field_Endpoint": "/public/course-create", "Field_Body": "{ \"title\": \"Psychology 101\", \"year_group\": \"Y12\", \"identifier\": \"PSY101\", \"school_id\": 1 }"}'>Create course</option>
+					<option value='{"Field_Endpoint": "/public/course-edit", "Field_Body": "{ \"title\": \"\", \"year_group\": \"\", \"identifier\": \"\" }"}'>Edit course</option>
+					<option value='{"Field_Endpoint": "/public/course-delete", "Field_Body": "{\"oid\": 3}"}'>Delete course</option>
+					<option value='{"Field_Endpoint": "/public/extract-create", "Field_Body": "%%Public_ExtractCreate%%"}'>Extract Create</option>
+					<option value='{"Field_Endpoint": "/public/extract-share-add", "Field_Body": ""}'>Extract Share Add</option>
+					<option value='{"Field_Endpoint": "/public/extract-share-deactivate", "Field_Body": "{ \"share_oid\" : \"\" }"}'>Extract Share Deactivate</option>
+					<option value='{"Field_Endpoint": "/public/extract-get-share-links", "Field_Body": "{\"extract_id\": 1}"}'>Extract Get Share Links</option>
+					<option value='{"Field_Endpoint": "/public/extract-search", "Field_Body": ""}'>Extract Search</option>
+					<option value='{"Field_Endpoint": "/public/extract-view-one", "Field_Body": ""}'>Extract View One</option>
+					<option value='{"Field_Endpoint": "/public/get-extract-limits", "Field_Body": "%%Public_Get_Extract_Limit%%"}'>Get Extract Limits</option>
+					<option value='{"Field_Endpoint": "/public/subjects-get-all", "Field_Body": ""}'>Get All Subjects</option>
+					<option value='{"Field_Endpoint": "/public/extract-title-update", "Field_Body": ""}'>Extract Title Update</option>
+					<option value='{"Field_Endpoint": "/public/extract-get-filters", "Field_Body": ""}'>Extract Get Filters</option>
+					<option value='{"Field_Endpoint": "/public/first-time-user-experience-get-mine-seen", "Field_Body": "{\"screen\": \"search\"}"}'>First Time User Experience Get Mine Seen</option>
+					<option value='{"Field_Endpoint": "/public/first-time-user-experience-update", "Field_Body": "{\"screen\": \"search\", \"index\": 1}"}'>First Time User Experience Update</option>
+					<option value='{"Field_Endpoint": "/public/extract-note-create", "Field_Body": "%%Public_ExtractNoteCreate%%"}'>Extract Note Create</option>
+					<option value='{"Field_Endpoint": "/public/extract-note-delete", "Field_Body": "%%Public_ExtractNoteDelete%%"}'>Extract Note Delete</option>
+					<option value='{"Field_Endpoint": "/public/extract-note-update", "Field_Body": "%%Public_ExtractNoteUpdate%%"}'>Extract Note Update</option>
+					<option value='{"Field_Endpoint": "/public/extract-note-get-all", "Field_Body": "%%Public_ExtractNoteGetAll%%"}'>Extract Note Get All</option>
+					<option value='{"Field_Endpoint": "/public/extract-page-join-get-all", "Field_Body": "%%Public_ExtractPageJoinGetAll%%"}'>Extract Page Join Get All</option>
+					<option value='{"Field_Endpoint": "/public/extract-highlight-create", "Field_Body": "%%Public_ExtractHighlightCreate%%"}'>Extract Highlight Create</option>
+					<option value='{"Field_Endpoint": "/public/extract-highlight-update", "Field_Body": "%%Public_ExtractHighlightUpdate%%"}'>Extract Highlight Update</option>
+					<option value='{"Field_Endpoint": "/public/extract-highlight-delete", "Field_Body": "%%Public_ExtractHighlightDelete%%"}'>Extract Highlight Delete</option>
+					<option value='{"Field_Endpoint": "/public/extract-highlight-get-all", "Field_Body": "%%Public_ExtractHighlightGetAll%%"}'>Extract Highlight Get All</option>
+					<option value='{"Field_Endpoint": "/public/carousel-slide-get-all", "Field_Body": ""}'>Carousel Slide Get All</option>
+					<option value='{"Field_Endpoint": "/public/get-temp-unlocked-assets", "Field_Body": ""}'>Temporarily Unlocked Assets Get All</option>
+				</optgroup>
+				<optgroup label="Search">
+					<option value='{"Field_Endpoint": "/search/get-assets", "Field_Body": ""}'>Get assets</option>
+					<option value='{"Field_Endpoint": "/search/upsert", "Field_Body": "%%Search_UpsertFieldBody%%"}'>
+						Upsert</option>
+					<option value='{"Field_Endpoint": "/search/search", "Field_Body": "%%Search_SearchFieldBody%%"}'>
+						Search</option>
+					<option value='{"Field_Endpoint": "/search/get-filters", "Field_Body": ""}'>Get Filters</option>
+				</optgroup>
+			</select>
+			<!-- Admin Templates -->
+			<template id="Admin_ValidateUpsert">
+				{
+				"dummy": true
+				}
+			</template>
+			<template id="Admin_UploadToAzure">
+				{
+				"connection_string": "ENTER AZURE CONNECTION STRING HERE!"
+				}
+			</template>
+			<template id="Admin_ClassGetAllForSchool">
+				{
+				"limit": 10,
+				"offset": 0,
+				"sort_field": "title",
+				"sort_direction": "A",
+				"query": ""
+				}
+			</template>
+			<template id="Admin_ClassCreate">
+				{
+				"title": "",
+				"year_group": "",
+				"identifier": "",
+				"key_stage": "",
+				"number_of_students": 0,
+				"exam_board": ""
+				}
+			</template>
+			<template id="Admin_ClassUpdate">
+				{
+				"oid": "",
+				"title": "",
+				"key_stage": "",
+				"year_group": "",
+				"identifier": "",
+				"number_of_students": "",
+				"exam_board": ""
+				}
+			</template>
+			<template id="Admin_ApproveDomainGetAll">
+				{
+				"limit": 5,
+				"offset": 0,
+				"sort_field": "domain",
+				"sort_direction": "A",
+				"query":""
+				}
+			</template>
+
+			<template id="Admin_ApproveDomainCreate">
+				{
+				"school_id": 1,
+				"domain": "email.com"
+				}
+			</template>
+
+			<template id="Admin_ApproveDomainUpdate">
+				{
+				"id":1,
+				"school_id": 1,
+				"domain": "email12.com"
+				}
+			</template>
+
+			<template id="Admin_ApproveDomainDelete">
+				{
+				"id":1
+				}
+			</template>
+			<template id="Admin_SchoolGetAll">
+				{
+				"limit": 1,
+				"offset": 0,
+				"sort_field": "name",
+				"sort_direction": "A",
+				"query":""
+				}
+			</template>
+			<template id="Admin_SchoolUpdate">
+				{
+				"id": 0,
+				"identifier": "",
+				"name": "",
+				"address1": "",
+				"address2": "",
+				"city": "",
+				"county": "",
+				"post_code": "",
+				"territory": "",
+				"local_authority": "",
+				"school_level": "",
+				"school_type": "",
+				"school_home_page": "",
+				"number_of_students": ""
+				}
+			</template>
+			<template id="Admin_UnlockBulk">
+				{
+				"isbns": ["9780008144678", "9781844198177", "9780007138784"],
+				"school_id": 0
+				}
+			</template>
+			<template id="Admin_SchoolCreate">
+				{
+				"identifier": "",
+				"name": "",
+				"address1": "",
+				"address2": "",
+				"city": "",
+				"county": "",
+				"post_code": "",
+				"territory": "",
+				"local_authority": "",
+				"school_level": "",
+				"school_type": "",
+				"school_home_page": "",
+				"number_of_students": ""
+				}
+			</template>
+			<template id="Admin_CarouselGetAll">
+				{
+				"limit": 10,
+				"offset": 0,
+				"sort_field": "name",
+				"sort_direction": "A",
+				}
+			</template>
+			<template id="Admin_CarouselCreate">
+				{
+				"name": "",
+				"enabled": false,
+				"sort_order": 0,
+				"image_url": "",
+				"image_alt_text": "",
+				"link_url": ""
+				}
+			</template>
+			<template id="Admin_CarouselUpdate">
+				{
+				"id": 0,
+				"name": "",
+				"enabled":false,
+				"sort_order": 0,
+				"image_url": "",
+				"image_alt_text": "",
+				"link_url": ""
+				}
+			</template>
+			<template id="Admin_AssetProcessingLogGetAll">
+				{
+				"limit": 10,
+				"offset": 0,
+				"sort_field": "id",
+				"sort_direction": "D",
+				"query": "" 
+				}
+			</template>
+
+			<template id="Admin_AddDummyExtractAccesses">
+				{
+				"oid": "Extract Share OID",
+				"number_of_accesses": 10,
+				"date_from": "YYYY-MM-DD HH::ii::ssZ",
+				"date_to": "YYYY-MM-DD HH::ii::ssZ"
+				}
+			</template>
+
+			<template id="Admin_PublisherInGetAll">
+				{
+				"limit": 5,
+				"offset": 0,
+				"sort_field": "domain",
+				"sort_direction": "A",
+				"query":""
+				}
+			</template>
+
+			<template id="Admin_UnlockImageUploadAll">
+				{
+				"limit": 5,
+				"offset": 0,
+				"sort_field": "status",
+				"sort_direction": "A",
+				"query":""
+				}
+			</template>
+
+			<template id="Home_Screen_Blog_Category_Update">
+				{
+				"blog_category_names": [
+				"Test 1",
+				" Test 2 ",
+				" ",
+				null,
+				"ABC "
+				]
+				}
+			</template>
+
+			<!-- Auth Templates -->
+			<template id="Auth_CreateUser">
+				{
+				"first_name": "name",
+				"last_name": "name",
+				"email": "email@email.com",
+				"password": "123456",
+				"school_id": 1,
+				"role": "teacher"
+				}
+			</template>
+			<template id="Auth_UpdateMyDetails">
+				{
+				"title" :"Mr",
+				"email":"admina1@email.com",
+				"first_name" :"",
+				"last_name" :"",
+				"job_title" :""
+				}
+			</template>
+			<template id="Auth_UserCreate">
+				{
+				"title": "Mr",
+				"first_name": "name",
+				"last_name": "name",
+				"email": "email@email.com",
+				"role": "teacher"
+				}
+			</template>
+			<template id="Auth_UserCreateBulk">
+				{
+				"items": [
+				{
+				"title": "Mrs",
+				"first_name": "Jennifer",
+				"last_name": "Smith",
+				"email": "a@b.c",
+				"role": "teacher"
+				},
+				{
+				"title": "Mr",
+				"first_name": "Bob",
+				"last_name": "Jones",
+				"email": "c@d.e",
+				"role": "teacher"
+				}
+				]
+				}
+			</template>
+			<template id="Auth_Activate">
+				{
+				"activation_token": "d79b08c7ff1808ade7dd4a20f6ec1cbf",
+				"password": "123456",
+				"terms_accepted": true
+				}
+			</template>
+			<template id="Auth_Login">
+				{
+				"email": "admin@email.com",
+				"password": "123456"
+				}
+			</template>
+			<template id="Auth_UserDelete">
+				{
+				"email": "email@email.com"
+				}
+			</template>
+			<template id="Auth_UserUpdate">
+				{
+				"current_email": "email@email.com"
+				}
+			</template>
+			<template id="Auth_UserConfirmEmailChange">
+				{
+				"token": "TOKEN GOES HERE"
+				}
+			</template>
+			<template id="Auth_UserInitPasswordReset">
+				{
+				"email": "email@email.com"
+				}
+			</template>
+			<template id="Auth_UserCompletePasswordReset">
+				{
+				"token": "token here",
+				"password": "pass1",
+				"password_confirm": "pass1"
+				}
+			</template>
+			<template id="Auth_UserGetAll">
+				{
+				"limit": 10,
+				"offset": 0,
+				"sort_field": "first_name",
+				"sort_direction": "A",
+				"query":""
+				}
+			</template>
+			<template id="Auth_Register">
+				{
+				"title": "Mr",
+				"school": "school_id_here",
+				"email": "",
+				"first_name": "",
+				"last_name": "",
+				"job_title": "",
+				"terms_accepted": true
+				}
+			</template>
+			<template id="Auth_Verify">
+				{
+				"activation_token": "36_digit_activation_token",
+				"terms_accepted": true
+				}
+			</template>
+			<template id="isApprovedDomainSchool">
+				{
+				"email": "user@cla.co.uk",
+				"school": 9
+				}
+			</template>
+			<template id="Auth_UserApprove">
+				{
+				"email": "",
+				"role": "teacher"
+				}
+			</template>
+			<template id="Auth_UserReject">
+				{
+				"email": ""
+				}
+			</template>
+			<template id="Auth_UserResendSetPassword">
+				{
+				"email": ""
+				}
+			</template>
+			<template id="Auth_UserResendVerify">
+				{
+				"email": ""
+				}
+			</template>
+			<template id="Auth_SchoolEdit">
+				{
+				"name": "School A",
+				"school_level": "High School",
+				"address1": "375 City Road",
+				"address2": "Angel",
+				"city": "London",
+				"post_code": "EC1V 1NB",
+				"country": "GB",
+				"local_authority": "Islington",
+				"school_home_page": "https://tvf.co.uk",
+				"number_of_students": 60
+				}
+			</template>
+
+			<!-- Public Templates -->
+			<template id="Public_ExtractCreate">
+				{
+				"course_oid": "FILL ME IN",
+				"work_isbn13": "FILL ME IN",
+				"students_in_course": 5,
+				"exam_board": "OCR",
+				"extract_title": "My first extract!",
+				"pages": [2, 4, 8]
+				}
+			</template>
+			<template id="Public_ExtractNoteCreate">
+				{
+				"extract_oid": "11152bb4a68bf2ce3a6fa1adb595bdde8643",
+				"page_index": 1,
+				"content": "Test Note 1",
+				"colour": "#FFFF00",
+				"position_x": 1.5,
+				"position_y": 5.5,
+				"width": 100,
+				"height": 100,
+				"zindex": 1
+				}
+			</template>
+			<template id="Public_ExtractNoteDelete">
+				{
+				"oid": "11152bb4a68bf2ce3a6fa1adb595bdde8643"
+				}
+			</template>
+			<template id="Public_ExtractNoteUpdate">
+				{
+				"oid": "11152bb4a68bf2ce3a6fa1adb595bdde8643",
+				"page_index": 1,
+				"content": "Test Note 1",
+				"position_x": 1.5,
+				"position_y": 5.5,
+				"width": 100,
+				"height": 100,
+				"zindex": 1
+				}
+			</template>
+			<template id="Public_ExtractHighlightCreate">
+				{
+					"extract_oid": "fac1813fea6267d09149406da6abea1de1ad",
+					"page_index": 1,
+					"colour": "#FFFF00",
+					"position_x": 1.5,
+					"position_y": 5.5,
+					"width": 100,
+					"height": 100
+				}
+			</template>
+			<template id="Public_ExtractHighlightUpdate">
+				{
+					"extract_oid": "fac1813fea6267d09149406da6abea1de1ad",
+					"page_index": 1,
+					"position_x": 1.5,
+					"position_y": 5.5,
+					"width": 100,
+					"height": 100
+				}
+			</template>
+			<template id="Public_ExtractHighlightGetAll">
+				{
+					"extract_oid": "fac1813fea6267d09149406da6abea1de1ad",
+					"page_index": 1
+				}
+			</template>
+			<template id="Public_ExtractHighlightDelete">
+				{
+					"oid": "fac1813fea6267d09149406da6abea1de1ad"
+				}
+			</template>
+			<template id="Public_ExtractNoteGetAll">
+				{
+				"extract_oid": "11152bb4a68bf2ce3a6fa1adb595bdde8643",
+				"page_index": 1
+				}
+			</template>
+			<template id="Public_ExtractPageJoinGetAll">
+				{
+					"extract_oid": "11152bb4a68bf2ce3a6fa1adb595bdde8643",
+					"page_index": 1
+				}
+			</template>
+
+			<template id="Public_Get_Extract_Limit">
+				{
+				"course_oid": "11152bb4a68bf2ce3a6fa1adb595bdde8643",
+				"work_isbn13": "9780198396796"
+				}
+			</template>
+
+			<!-- Search Templates -->
+			<template id="Search_SearchFieldBody">
+				{
+				"query": "Johnson",
+				"offset": 0,
+				"limit": 10
+				}
+			</template>
+			<template id="Search_UpsertFieldBody">
+				{
+				"data": [
+				{
+				"title": "Enter the Dragon",
+				"sub_title": "A collector's edition",
+				"authors": [
+				{"firstName": "Bob", "lastName": "Johnson"},
+				{"firstName": "Alan", "lastName": "Smith"}
+				],
+				"isbn13": "9871836489178"
+				},
+				{
+				"title": "Looking at the Plants",
+				"authors": [
+				{"firstName": "Jane", "lastName": "Doe"},
+				{"firstName": "Rob E.", "lastName": "Black"},
+				{"firstName": "Jimmy", "lastName": "Brown"}
+				],
+				"isbn13": "9870836489178"
+				}
+				]
+				}
+			</template>
+
+			<br />
+			<form id="Form">
+				<label for="Field_ApiBase">
+					<h6>Api Base</h6>
+					<input type="text" id="Field_ApiBase" name="api_base" value="http://localhost:13000" />
+				</label>
+				<label for="Field_Endpoint">
+					<h6>Endpoint (relative to 'Api Base' above)</h6>
+					<input type="text" id="Field_Endpoint" name="endpoint" value="/the-endpoint" />
+				</label>
+				<label for="Field_Type">
+					<h6>Type</h6>
+					<select id="Field_Type" name="type">
+						<option value="json" selected>json</option>
+						<option value="binary">binary</option>
+					</select>
+				</label>
+				<label for="Field_Body">
+					<h6>Request body</h6>
+					<div>This will probably be a JSON object. Don't worry about spacing/formatting.</div>
+					<div name="body" id="Field_Body">{"example": "key", "goes": 5}</div>
+				</label>
+				<label for="Field_Request_Headers">
+					<h6>Request headers</h6>
+					<div>Enter request headers, one per line. Separate key and value with <code>:::</code>. Example:
+					</div>
+					<pre>Content-Type ::: application/json
+X-CSRF ::: y</pre>
+					<textarea id="Field_Request_Headers" name="request_headers"
+						placeholder="Request Headers (one per line)"></textarea>
+				</label>
+				<label for="Field_FileData">
+					<h6>File Data</h6>
+					<div>Select one or more files below. Only valid for 'binary' endpoints.</div>
+					<input id="Field_FileData" type="file" name="files" multiple />
+				</label>
+				<label for="Field_FileDataName">
+					<h6>File Data (Name)</h6>
+					<div>The files will be sent to the server under this key. Equivalent of the 'name' attribute on an
+						input[type=file].</div>
+					<input id="Field_FileDataName" type="text" name="file_data_name" value="files" />
+				</label>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"
+		integrity="sha256-kCykSp9wgrszaIBZpbagWbvnsHKXo4noDEi6ra6Y43w=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/mode-json.js"
+		integrity="sha256-5EVk5VxgaaxewTfhTYpOb+ZtkrGZBodhy1bhw+FcFoY=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/5.24.6/jsoneditor.js"
+		integrity="sha256-1lUvMtukJ07Dh12ht376PabRhHfU6b9M2C2ZzUQtXrY=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		(async function () {
+			let xhr;
+			const form = document.getElementById('Form');
+			const resultEl = document.getElementById('Res');
+			const errorEl = document.getElementById('Errors');
+
+			function getDefaultRequestHeaders() {
+				let defaultRequestHeaders = `X-CSRF ::: y`;
+				if (window.localStorage.getItem('sessId')) {
+					defaultRequestHeaders += '\nX-SESSID ::: ' + window.localStorage.getItem('sessId');
+				}
+				return defaultRequestHeaders;
+			}
+
+			form.elements.request_headers.value = getDefaultRequestHeaders();
+
+			const container = document.getElementById('Field_Body');
+			const json = JSON.parse(container.innerHTML);
+			container.innerHTML = '';
+			const editor = new JSONEditor(container, {
+				search: false,
+				statusBar: false,
+				mode: 'code',
+			});
+			editor.set(json);
+
+			const resultEditor = new JSONEditor(resultEl, {
+				search: false,
+				statusBar: true,
+				mode: 'view',
+			});
+
+			const doSubmit = async function () {
+				if (xhr) {
+					xhr.abort();
+				}
+				xhr = new XMLHttpRequest();
+				xhr.addEventListener('load', _ => {
+					if (xhr.status === 200) {
+						resultEditor.set(JSON.parse(xhr.responseText));
+						errorEl.innerHTML = '';
+					} else {
+						resultEditor.set({});
+						errorEl.innerHTML = xhr.responseText;
+					}
+					xhr = null;
+				});
+				const url = form.elements.api_base.value + form.elements.endpoint.value;
+				xhr.open('POST', url);
+				const requestHeaders = form.elements.request_headers.value.trim().split('\n');
+				for (const reqHeader of requestHeaders) {
+					const parts = reqHeader.split(':::');
+					if (parts.length != 2) {
+						continue;
+					}
+					const name = parts[0].trim();
+					const value = parts[1].trim();
+					xhr.setRequestHeader(name, value);
+				}
+				if (form.elements.type.value === 'binary') {
+					const fd = new FormData();
+					fd.append("__DATA__", editor.getText().trim());
+					const fileName = form.elements.file_data_name.value || 'files';
+					for (const file of form.elements.files.files) {
+						fd.append(fileName, file, file.name);
+					}
+					xhr.send(fd);
+				} else {
+					xhr.setRequestHeader('Content-Type', 'application/json');
+					const body = editor.getText().trim();
+					if (body) {
+						xhr.send(body);
+					} else {
+						xhr.send();
+					}
+				}
+			};
+			const presetSelectorEl = document.getElementById('PresetSelector');
+			presetSelectorEl.addEventListener('change', function (e) {
+				const optEl = presetSelectorEl.options[presetSelectorEl.selectedIndex];
+				if (optEl.value) {
+					form.reset();
+					editor.set({});
+					const data = {
+						Field_Request_Headers: getDefaultRequestHeaders(),
+						Field_ApiBase: document.getElementById('Field_ApiBase').value,
+					};
+
+					const additionalData = JSON.parse(optEl.getAttribute('value'));
+					Object.assign(data, additionalData);
+					for (const fieldId in data) {
+						if (data.hasOwnProperty(fieldId)) {
+							let fieldValue = data[fieldId];
+							if (fieldValue.match(/^%%(.+)%%$/)) {
+								fieldValue = document.getElementById(fieldValue.slice(2, -2)).innerHTML.trim();
+								data[fieldId] = fieldValue;
+							}
+							document.getElementById(fieldId).value = fieldValue;
+						}
+					}
+					if (data.Field_Body) {
+						editor.set(JSON.parse(data.Field_Body));
+					}
+					if (optEl.getAttribute('data-autosubmit')) {
+						doSubmit();
+					}
+				}
+			}, false);
+
+			form.addEventListener('submit', e => {
+				e.preventDefault();
+				doSubmit();
+			});
+		})();
+	</script>
+</body>
+
+</html>

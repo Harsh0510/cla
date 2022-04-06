@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`xml tree 1`] = `
+XmlNode {
+  "attribs": Object {},
+  "children": Array [
+    XmlNode {
+      "data": "hello there",
+      "next": XmlNode {
+        "attribs": Object {
+          "attri": "bute",
+        },
+        "children": Array [
+          XmlNode {
+            "data": " nested ",
+            "next": XmlNode {
+              "attribs": Object {},
+              "children": Array [],
+              "name": "another",
+              "next": XmlNode {
+                "data": "tag here! ",
+                "next": null,
+                "parent": [Circular],
+                "prev": [Circular],
+                "type": "text",
+              },
+              "parent": [Circular],
+              "prev": [Circular],
+              "type": "tag",
+            },
+            "parent": [Circular],
+            "prev": null,
+            "type": "text",
+          },
+          XmlNode {
+            "attribs": Object {},
+            "children": Array [],
+            "name": "another",
+            "next": XmlNode {
+              "data": "tag here! ",
+              "next": null,
+              "parent": [Circular],
+              "prev": [Circular],
+              "type": "text",
+            },
+            "parent": [Circular],
+            "prev": XmlNode {
+              "data": " nested ",
+              "next": [Circular],
+              "parent": [Circular],
+              "prev": null,
+              "type": "text",
+            },
+            "type": "tag",
+          },
+          XmlNode {
+            "data": "tag here! ",
+            "next": null,
+            "parent": [Circular],
+            "prev": XmlNode {
+              "attribs": Object {},
+              "children": Array [],
+              "name": "another",
+              "next": [Circular],
+              "parent": [Circular],
+              "prev": XmlNode {
+                "data": " nested ",
+                "next": [Circular],
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+              "type": "tag",
+            },
+            "type": "text",
+          },
+        ],
+        "name": "nested",
+        "parent": [Circular],
+        "prev": [Circular],
+        "type": "tag",
+      },
+      "parent": [Circular],
+      "prev": null,
+      "type": "text",
+    },
+    XmlNode {
+      "attribs": Object {
+        "attri": "bute",
+      },
+      "children": Array [
+        XmlNode {
+          "data": " nested ",
+          "next": XmlNode {
+            "attribs": Object {},
+            "children": Array [],
+            "name": "another",
+            "next": XmlNode {
+              "data": "tag here! ",
+              "next": null,
+              "parent": [Circular],
+              "prev": [Circular],
+              "type": "text",
+            },
+            "parent": [Circular],
+            "prev": [Circular],
+            "type": "tag",
+          },
+          "parent": [Circular],
+          "prev": null,
+          "type": "text",
+        },
+        XmlNode {
+          "attribs": Object {},
+          "children": Array [],
+          "name": "another",
+          "next": XmlNode {
+            "data": "tag here! ",
+            "next": null,
+            "parent": [Circular],
+            "prev": [Circular],
+            "type": "text",
+          },
+          "parent": [Circular],
+          "prev": XmlNode {
+            "data": " nested ",
+            "next": [Circular],
+            "parent": [Circular],
+            "prev": null,
+            "type": "text",
+          },
+          "type": "tag",
+        },
+        XmlNode {
+          "data": "tag here! ",
+          "next": null,
+          "parent": [Circular],
+          "prev": XmlNode {
+            "attribs": Object {},
+            "children": Array [],
+            "name": "another",
+            "next": [Circular],
+            "parent": [Circular],
+            "prev": XmlNode {
+              "data": " nested ",
+              "next": [Circular],
+              "parent": [Circular],
+              "prev": null,
+              "type": "text",
+            },
+            "type": "tag",
+          },
+          "type": "text",
+        },
+      ],
+      "name": "nested",
+      "parent": [Circular],
+      "prev": XmlNode {
+        "data": "hello there",
+        "next": [Circular],
+        "parent": [Circular],
+        "prev": null,
+        "type": "text",
+      },
+      "type": "tag",
+    },
+  ],
+  "name": "test",
+  "type": "tag",
+}
+`;

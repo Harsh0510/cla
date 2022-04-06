@@ -1,0 +1,130 @@
+{
+    "date": "2022-04-04T12:34:37.140Z",
+    "from": null,
+    "to": "harshm.patel@radixweb.com",
+    "subject": "Education Platform: Please confirm your email address",
+    "data": {
+        "title": "Education Platform: Please confirm your email address",
+        "content": "Hello Harsh,\n<br/><br/>\nPlease click the link below to confirm that your email address is correct.\n<br/><br/>\nYour request will then be sent for approval by the Education Platform administrator at your institution or the CLA; once that is done you will be able to make copies and have full access to the Platform.\n<br/><br/>\nFor your security, this link will expire in three days.",
+        "cta": {
+            "title": "Confirm email address",
+            "url": "http://localhost:16000/auth/approved-verify/923e67cbd2bf4257e3aae4c6a556eb2dd188"
+        },
+        "secondary_content": "If you need help completing your registration, please <a href=\"mailto:support@educationplatform.zendesk.com\">contact us</a> for assistance.<br/><br/>Follow us on Twitter <a href=\"https://twitter.com/eduplatformuk\" target=\"_blank\">@EduPlatformUK</a><br/><br/> To manage the notifications and emails you receive from us, login to the <a href=\"http://localhost:16000/profile/my-details\">My Details page</a>."
+    },
+    "category": "verify"
+}
+
+{
+    "date": "2022-04-04T12:40:37.148Z",
+    "from": null,
+    "to": "harshm.patel@radixweb.com",
+    "subject": "Get started on the Education Platform",
+    "data": {
+        "title": "Welcome to the Education Platform",
+        "content": "Hello Harsh,\n<br/><br/>\nYou can now use the Education Platform to help save time in teaching preparation and use Aldworth School's books to make copies under the CLA Education Licence.\n<br/><br/>\nYou can find and unlock books, make copies, and share them right away.",
+        "cta": {
+            "title": "Get started",
+            "url": "http://localhost:16000"
+        },
+        "secondary_content": "If you need help with the Platform, please <a href=\"mailto:support@educationplatform.zendesk.com\">contact us</a> for assistance.<br/><br/>Follow us on Twitter <a href=\"https://twitter.com/eduplatformuk\" target=\"_blank\">@EduPlatformUK</a><br/><br/> To manage the notifications and emails you receive from us, login to the <a href=\"http://localhost:16000/profile/my-details\">My Details page</a>."
+    },
+    "category": "post-approval"
+}
+
+{
+    "date": "2022-04-04T13:49:48.918Z",
+    "from": null,
+    "to": "harsh@barnet.sch.uk",
+    "subject": "Welcome to the Education Platform",
+    "data": {
+        "title": "Welcome to the Education Platform",
+        "content": "Hello Harsh,<br/><br/>You can now use the Education Platform to help save time in lesson preparation and use ABC International School's books to make copies under the CLA Education Licence.<br/><br/>You can find and unlock books, make copies, and share them right away.<br/><br/>Finally, please click on the link below to verify your email address.",
+        "cta": {
+            "title": "Verify email address",
+            "url": "http://localhost:16000/auth/approved-verify/6d358be36989659c5ec595ef3c7db88e6f76"
+        }
+    },
+    "category": "approved-verify"
+}
+
+{
+    "date": "2022-04-04T13:55:26.270Z",
+    "from": null,
+    "to": "harsh@aberdeen.sch.uk",
+    "subject": "Welcome to the Education Platform",
+    "data": {
+        "title": "Welcome to the Education Platform",
+        "content": "Hello Harsh,<br/><br/>You can now use the Education Platform to help save time in lesson preparation and use Aldworth School's books to make copies under the CLA Education Licence.<br/><br/>You can find and unlock books, make copies, and share them right away.<br/><br/>Finally, please click on the link below to verify your email address.",
+        "cta": {
+            "title": "Verify email address",
+            "url": "http://localhost:16000/auth/approved-verify/a35e239a73c680161c9bdaa5d91c47290797"
+        }
+    },
+    "category": "approved-verify"
+}
+
+{
+    "date": "2022-04-04T14:01:00.285Z",
+    "from": null,
+    "to": "harsh@aldworth.hants.sch.uk",
+    "subject": "Welcome to the Education Platform",
+    "data": {
+        "title": "Welcome to the Education Platform",
+        "content": "Hello Harsh,<br/><br/>You can now use the Education Platform to help save time in lesson preparation and use Aldworth School's books to make copies under the CLA Education Licence.<br/><br/>You can find and unlock books, make copies, and share them right away.<br/><br/>Finally, please click on the link below to verify your email address.",
+        "cta": {
+            "title": "Verify email address",
+            "url": "http://localhost:16000/auth/approved-verify/db270bcd3e1886c9fc235512fd00c46f4511"
+        }
+    },
+    "category": "approved-verify"
+}
+
+{
+    "date": "2022-04-05T06:26:08.637Z",
+    "from": null,
+    "to": "support@educationplatform.zendesk.com",
+    "subject": "EP check permissions alert: Permissions not found for 9788172763657 by Aldworth School, 66",
+    "data": {
+        "title": "Permissions not found for 9788172763657",
+        "content": "The user 61748 from Aldworth School (66) has uploaded a PDF for 9788172763657: Some title here: First where a 'Not found' result was returned by Check Permissions.\n<br/><br/>To review this further, <a href='http://localhost:16000/profile/admin/user-uploaded-extracts'>click here</a> or see below for relevant book metadata.\n<br/>\n<br/>- ISBN: 9788172763657\n<br/>- Title: Some title here: First\n<br/>- Author: Mary Lake Johnson; John Smith\n<br/>- Publisher: Hodde rvvvv\n<br/>- Publication year: 2007",
+        "cta": {
+            "title": "Review",
+            "url": "http://localhost:16000/profile/admin/user-uploaded-extracts"
+        }
+    },
+    "category": "user-upload-cover-status-not-found"
+}
+
+{
+    "date": "2022-04-05T06:27:31.564Z",
+    "from": null,
+    "to": "support@educationplatform.zendesk.com",
+    "subject": "EP check permissions alert: Permissions not found for 9788172763657 by Aldworth School, 66",
+    "data": {
+        "title": "Permissions not found for 9788172763657",
+        "content": "The user 61748 from Aldworth School (66) has uploaded a PDF for 9788172763657: Some title here: First where a 'Not found' result was returned by Check Permissions.\n<br/><br/>To review this further, <a href='http://localhost:16000/profile/admin/user-uploaded-extracts'>click here</a> or see below for relevant book metadata.\n<br/>\n<br/>- ISBN: 9788172763657\n<br/>- Title: Some title here: First\n<br/>- Author: Mary Lake Johnson; John Smith\n<br/>- Publisher: Hodde rvvvv\n<br/>- Publication year: 2007",
+        "cta": {
+            "title": "Review",
+            "url": "http://localhost:16000/profile/admin/user-uploaded-extracts"
+        }
+    },
+    "category": "user-upload-cover-status-not-found"
+}
+
+{
+    "date": "2022-04-05T12:02:40.579Z",
+    "from": null,
+    "to": "support@educationplatform.zendesk.com",
+    "subject": "EP check permissions alert: Permissions not found for 9788172763657 by Euler Academy, 74803",
+    "data": {
+        "title": "Permissions not found for 9788172763657",
+        "content": "The user 61702 from Euler Academy (74803) has uploaded a PDF for 9788172763657: Some title here: First where a 'Not found' result was returned by Check Permissions.\n<br/><br/>To review this further, <a href='http://localhost:16000/profile/admin/user-uploaded-extracts'>click here</a> or see below for relevant book metadata.\n<br/>\n<br/>- ISBN: 9788172763657\n<br/>- Title: Some title here: First\n<br/>- Author: Mary Lake Johnson; John Smith\n<br/>- Publisher: Hodde rvvvv\n<br/>- Publication year: 2007",
+        "cta": {
+            "title": "Review",
+            "url": "http://localhost:16000/profile/admin/user-uploaded-extracts"
+        }
+    },
+    "category": "user-upload-cover-status-not-found"
+}
+

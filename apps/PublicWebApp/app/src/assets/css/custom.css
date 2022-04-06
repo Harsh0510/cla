@@ -1,0 +1,209 @@
+/*---------font face ------- */
+@font-face {
+	font-family: "FS Elliot";
+	src: url("../fonts/FSElliot.eot");
+	src: url("../fonts/FSElliot.eot?#iefix") format("embedded-opentype"), url("../fonts/FSElliot.woff2") format("woff2"),
+		url("../fonts/FSElliot.woff") format("woff"), url("../fonts/FSElliot.svg#FSElliot") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "FS Elliot";
+	src: url("../fonts/FSElliot-Heavy.eot");
+	src: url("../fonts/FSElliot-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/FSElliot-Heavy.woff2") format("woff2"),
+		url("../fonts/FSElliot-Heavy.woff") format("woff"), url("../fonts/FSElliot-Heavy.svg#FSElliot-Heavy") format("svg");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "FS Elliot";
+	src: url("../fonts/FSElliot-Bold.eot");
+	src: url("../fonts/FSElliot-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/FSElliot-Bold.woff2") format("woff2"),
+		url("../fonts/FSElliot-Bold.woff") format("woff"), url("../fonts/FSElliot-Bold.svg#FSElliot-Bold") format("svg");
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* font face end  */
+
+:root {
+	font-size: 16px;
+}
+
+html,
+body {
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	margin: 0;
+	font-family: "FS Elliot", sans-serif;
+	font-weight: normal;
+	font-size: 1rem;
+	line-height: 25px;
+	line-height: 1.5;
+	color: #3e3a4a;
+	background-color: #ffffff;
+	position: relative;
+	padding-bottom: 140px;
+	overflow-y: auto;
+	height: auto;
+}
+
+a,
+button,
+.pointer {
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+button:focus,
+select:focus {
+	outline: none;
+}
+
+h1,
+.h1 {
+	font-size: 2.375em;
+}
+h2,
+.h2 {
+	font-size: 2.1875em;
+	font-weight: 600;
+}
+h3,
+.h3 {
+	font-size: 1.625em;
+	font-weight: bolder;
+}
+h4,
+.h4 {
+	font-size: 1.5em;
+}
+
+@media (max-width: 991px) {
+	body {
+		padding-bottom: 0;
+	}
+}
+@media (max-width: 440px) {
+	.col-xs-12 {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+
+/*----- typography  -----*/
+strong,
+b {
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #006473;
+}
+
+/** Below css we take from defualt css */
+input,
+textarea,
+select,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	background-color: #ffffff;
+	padding: 1em;
+	border-width: 1px;
+	border-style: solid;
+}
+
+::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	opacity: 0.5;
+}
+::-moz-placeholder {
+	/* Firefox 19+ */
+	opacity: 0.5;
+}
+:-ms-input-placeholder {
+	/* IE 10+ */
+	opacity: 0.5;
+}
+:-moz-placeholder {
+	/* Firefox 18- */
+	opacity: 0.5;
+}
+@media screen and (max-width: 575px) {
+	h1,
+	.h1 {
+		font-size: 2.1875em;
+	}
+	h2,
+	.h2 {
+		font-size: 1.625em;
+	}
+	h3,
+	.h3 {
+		font-size: 1.375em;
+	}
+	h4,
+	.h4 {
+		font-size: 1.25em;
+	}
+}
+
+.embed-responsive > div {
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 0;
+	overflow: hidden;
+}
+
+.embed-responsive > div::before {
+	display: block;
+	content: "";
+}
+
+.embed-responsive-16by9 > div::before {
+	padding-top: 56.25%;
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive embed,
+.embed-responsive iframe,
+.embed-responsive object,
+.embed-responsive video {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+.ril__toolbar {
+	pointer-events: none !important;
+}
+
+.ril__toolbarRightSide {
+	pointer-events: auto !important;
+}
+.ril-caption {
+	pointer-events: none !important;
+}

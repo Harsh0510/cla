@@ -1,0 +1,9 @@
+{
+	"name": "a",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"glob": "^7.1.6",
+		"xlsx": "^0.15.3"
+	}
+}

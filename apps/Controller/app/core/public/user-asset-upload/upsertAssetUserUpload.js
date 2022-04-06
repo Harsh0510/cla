@@ -1,0 +1,65 @@
+module.exports = async (querier, params) => {
+	const result = await querier(
+		`
+			INSERT INTO
+				asset_user_upload
+				(
+					asset_id,
+					user_id,
+					pages,
+					title,
+					filename,
+					description,
+					upload_name,
+					is_copying_full_chapter,
+					file_size,
+					copy_ratio,
+					oid,
+					asset_authors,
+					user_first_name,
+					user_last_name,
+					cover_status,
+					pdf_page_count
+				)
+			VALUES
+				(
+					$1,
+					$2,
+					$3,
+					$4,
+					$5,
+					$4,
+					$6,
+					$7,
+					$8,
+					$9,
+					$10,
+					$11,
+					$12,
+					$13,
+					$14,
+					$15
+				)
+			RETURNING
+				id
+		`,
+		[
+			params.asset_id,
+			params.user_id,
+			JSON.stringify(params.pages),
+			params.title,
+			params.file_name,
+			params.upload_name,
+			params.is_copying_full_chapter || false,
+			params.file_size,
+			params.copy_ratio,
+			params.oid,
+			params.asset_authors,
+			params.user_first_name,
+			params.user_last_name,
+			params.cover_status,
+			params.pdf_page_count,
+		]
+	);
+	return result.rows[0].id;
+};

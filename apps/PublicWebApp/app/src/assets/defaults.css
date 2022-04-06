@@ -1,0 +1,88 @@
+body {
+	font-family: 'Elliot Sans', sans-serif;
+	font-weight: normal;
+	color: #4a4a4a;
+	line-height: 1.5;
+	font-size: 16px;
+	margin: 0;
+	letter-spacing: 0.7px;
+}
+
+button {
+	font-family: inherit;
+	font-size: 1em;
+	border: none;
+	cursor: pointer;
+}
+
+input, textarea, select, option {
+	font-family: inherit;
+	font-size: inherit;
+	background-color: #ffffff;
+	padding: 1em;
+	border-width: 1px;
+	border-style: solid;
+}
+
+a {
+	color: inherit;
+}
+
+h1 {
+	font-size: 100px;
+	font-weight: bold;
+	line-height: 1;
+	letter-spacing: 1.25px;
+	margin: 0 0 0.33em 0;
+}
+
+h2 {
+	font-size: 32px;
+	font-weight: normal;
+	line-height: 1;
+	margin: 0 0 0.5em 0;
+	letter-spacing: 1.4px;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: 0.7px;
+}
+
+h4 {
+	font-weight: normal;
+	font-size: 20px;
+	letter-spacing: 0;
+	line-height: 30px;
+}
+
+p {
+	letter-spacing: 0.7px;
+}
+
+:first-child {
+	margin-top: 0;
+}
+
+:last-child {
+	margin-bottom: 0;
+}
+
+input { 
+	outline: none;
+	box-shadow: none !important;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	opacity: 0.5;
+}
+::-moz-placeholder { /* Firefox 19+ */
+	opacity: 0.5;
+}
+:-ms-input-placeholder { /* IE 10+ */
+	opacity: 0.5;
+}
+:-moz-placeholder { /* Firefox 18- */
+	opacity: 0.5;
+}

@@ -1,0 +1,47 @@
+export default [
+	{
+		course_name: "Mapletree",
+		course_oid: "a29c4f626bab7933fc9c7f9a3214efcd72c1",
+		date_created: "2019-05-04T08:43:37.375Z",
+		date_expired: "2019-07-31T23:59:59.999Z",
+		edition: 1,
+		exam_board: null,
+		imprint: "Andrew Brodie",
+		oid: "bc6a1c6c1dbf34532784f73cb3230736dbc9",
+		page_count: 2,
+		school_name: "Test school A",
+		students_in_course: 5,
+		teacher: "admin abc",
+		title: "test",
+		user_id: 12,
+		work_authors: [
+			{
+				role: "A",
+				lastName: "Brodie",
+				firstName: "Andrew",
+			},
+			{
+				role: "A",
+				lastName: "Testino",
+				firstName: "Andrew",
+			},
+			{
+				role: "B",
+				lastName: "Bill B",
+				firstName: "Gest",
+			},
+			{
+				role: "B",
+				lastName: "Bill C",
+				firstName: "Jest",
+			},
+		],
+		work_isbn13: "9781906622701",
+		work_publication_date: "2017-05-01T00:00:00.000Z",
+		work_publisher: "Elmwood Education",
+		work_title: "Essential Maths A Level Pure Mathematics Book 2",
+		year_group: "5-7",
+		file_format: "pdf",
+		pages: [1, 2, 3],
+	},
+];

@@ -1,0 +1,43 @@
+{
+	"extends": [
+		"plugin:prettier/recommended"
+	],
+	"plugins": [
+		"react",
+		"prettier"
+	],
+	"env": {
+		"browser": true,
+		"jasmine": true,
+		"jest": true,
+		"es6": true
+	},
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{
+				"useTabs": true,
+				"printWidth": 150
+			}
+		],
+		"react/no-danger": 0,
+		"react/prop-types": 0,
+		"react/display-name": 0,
+		"no-debugger": 0,
+		"no-unused-vars": 0
+	},
+	"settings": {
+		"react": {
+			"pragma": "React",
+			"version": "detect"
+		}
+	},
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"globals": {
+		"process": true,
+		"__webpack_public_path__": true
+	},
+	"parser": "babel-eslint"
+}

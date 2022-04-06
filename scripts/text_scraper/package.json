@@ -1,0 +1,13 @@
+{
+	"name": "text_scraper",
+	"private": true,
+	"dependencies": {
+		"cheerio": "^1.0.0-rc.10",
+		"fs-extra": "^10.0.0",
+		"pg": "^8.7.3",
+		"prompts": "^2.4.2",
+		"puppeteer": "^13.3.2",
+		"sanitize-html": "^2.7.0",
+		"shell-quote": "^1.7.3"
+	}
+}

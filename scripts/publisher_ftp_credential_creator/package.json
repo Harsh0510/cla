@@ -1,0 +1,9 @@
+{
+	"name": "publisher_ftp_credential_creator",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"nodemailer": "~6.6.3",
+		"shell-quote": "~1.7.2"
+	}
+}
