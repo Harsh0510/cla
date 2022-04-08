@@ -70,6 +70,11 @@ module.exports = async function (app, asyncRunner) {
 	app.route("/admin/school-update", require("./school-update"));
 	app.route("/admin/school-delete", require("./school-delete"));
 
+	// Student
+	app.route("/admin/student-create", require("./student-create"));
+	app.route("/admin/all-students-get", require("./student-get-all"));
+	app.route("/admin/student-delete", require("./student-delete"));
+
 	// Misc
 	app.route("/admin/unlock-attempt-get-all", require("./unlock-attempt-get-all"));
 	app.route("/admin/extract-access-get-all", require("./extract-access-get-all"));

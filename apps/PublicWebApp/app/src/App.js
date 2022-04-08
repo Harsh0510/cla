@@ -83,6 +83,7 @@ const MyUploadsPage = React.lazy(() => import(/* webpackChunkName: "Page__MyUplo
 const UserUploadedExtractPage = React.lazy(() => import(/* webpackChunkName: "Page__UserUploadedExtractPage" */ "./pages/UserUploadedExtractPage"));
 
 const CopyAccessDeniedModal = React.lazy(() => import("./widgets/CopyAccessDeniedModal"));
+const Student = React.lazy(() => import("./pages/StudentPage/Student"));
 
 // Widgets
 import BackgroundWorms from "./widgets/BackgroundWorms";
@@ -208,6 +209,7 @@ export default class App extends React.PureComponent {
 													<Route path="/asset-upload" component={AssetUploadPage} />
 													<Route path="/profile/admin/my-uploads" exact={true} component={MyUploadsPage} />
 													<Route path="/profile/admin/user-uploaded-extracts" component={UserUploadedExtractPage} />
+													<Route path="/profile/admin/student" component={Student} />
 													<Route component={NotFoundPage} />
 												</Switch>
 												<CookieBar />

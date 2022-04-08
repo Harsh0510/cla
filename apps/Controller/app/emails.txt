@@ -128,3 +128,20 @@
     "category": "user-upload-cover-status-not-found"
 }
 
+{
+    "date": "2022-04-08T12:22:26.835Z",
+    "from": null,
+    "to": "harsh@cla.com",
+    "subject": "Education Platform: Finish setting up your account",
+    "data": {
+        "title": "Complete your Registration",
+        "content": "Thank you for signing up to the Education Platform. Finish setting up your account today using the link below and you can begin using the Platform right away to unlock digital versions of books your institution owns, make copies and share them with students.",
+        "secondary_content": "If you need help with setting up your account please <a href=\"mailto:support@educationplatform.zendesk.com\" target=\"_blank\" rel=\"noopener noreferrer\" data-auth=\"NotApplicable\">contact us</a> for assistance.<br/><br/> To manage the notifications and emails you receive from us, login to the <a href=\"http://localhost:16000/profile/my-details\">My Details page</a>.",
+        "cta": {
+            "title": "Verify Account",
+            "url": "http://localhost:16000/auth/approved-verify/837705796bc6e4c148b91eb259920bd7c55e"
+        }
+    },
+    "category": "user-not-verified"
+}
+
